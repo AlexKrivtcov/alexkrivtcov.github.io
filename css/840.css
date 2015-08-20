@@ -1,0 +1,52 @@
+#wrapper {
+    width: 800px;
+}
+#logo {
+    font: 45px/47px "vL1MSngA";
+}
+header::before {
+	left: 46px;
+    top: -49px;
+}
+nav {
+    margin: 0;
+}
+nav ul li:first-child{
+    padding-left: 15px;
+}
+nav ul li:last-child {
+    padding-right: 15px;
+}
+nav ul li {
+    padding: 0 10px;
+}
+nav ul li a{
+	font-size: 14px;
+    line-height: 16px;
+    min-width: 100px;
+    padding: 20px 0;
+}
+.roof{
+	width: 600px;
+	text-align: center;
+}
+.mansarda{
+	display: none;
+}
+.wall{
+	width: 760px;
+}
+
+.window, .window:nth-of-type(4n){
+	margin-right: 14.8%;
+}
+.window:nth-of-type(3n){
+	margin-right: 0;
+}
+.plate{
+	display: none;
+}
+#contacts:hover {
+    height: 240px;
+    width: 275px;
+}
