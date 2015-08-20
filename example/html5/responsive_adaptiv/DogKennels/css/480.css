@@ -1,0 +1,196 @@
+
+header{
+	padding: 15px 0 50px;
+}
+#header {
+    max-width: 460px;
+}
+.nav{
+	visibility: hidden;
+	opacity: 0;
+	width: 0;
+	position: absolute;
+	top: 55px;
+	left: -10px;
+	z-index: -1;
+	background: -webkit-linear-gradient(0deg, rgba(84, 177, 210, 0.9), rgba(220, 220, 220, 0.9) ) no-repeat 0 0;
+	background: -moz-linear-gradient(0deg, rgba(84, 177, 210, 0.9), rgba(220, 220, 220, 0.9) ) no-repeat 0 0;
+	background: -ms-linear-gradient(0deg, rgba(84, 177, 210, 0.9), rgba(220, 220, 220, 0.9) ) no-repeat 0 0;
+	background: -o-linear-gradient(0deg, rgba(84, 177, 210, 0.9), rgba(220, 220, 220, 0.9) ) no-repeat 0 0;
+	background: linear-gradient(0deg, rgba(84, 177, 210, 0.9), rgba(220, 220, 220, 0.9) ) no-repeat 0 0;
+	border-radius: 0 30px 30px 0;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	box-shadow:   0 -3px 8px rgba(0,0,0,.6) inset, 0 3px 8px rgba(252,255,255,.7) inset, 0 3px 8px -3px rgba(0,0,0,.8);
+}
+nav label span, nav label span:after, nav label span:before{
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+nav label{
+	display: block;
+	background-color: rgba(84, 177, 210, 1);
+    border-radius: 15px;
+    font-size: 0;
+    height: 50px;
+    padding: 7px;
+    width: 50px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow:   0 -3px 8px rgba(0,0,0,.6) inset, 0 3px 8px rgba(252,255,255,.7) inset, 0 3px 8px -3px rgba(0,0,0,.8);
+}
+nav label span{
+	display: block;
+	position: absolute;
+	top: 22px;
+	left: 10px;
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+}
+nav label span:after, nav label span:before{
+	display: block;
+	content: "";
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	position: absolute;
+	top: -10px;
+	left: 0;
+}
+nav label span:after{
+	top: 10px;
+}
+nav input:checked + label span{
+	top: 20px;
+	height: 8px;
+	border-radius: 3px;
+	box-shadow:   0 -1px 4px rgba(0,0,0,.6) inset, 0 1px 4px rgba(252,255,255,.7) inset, 0 1px 4px -1px rgba(0,0,0,.8);
+}
+nav input:checked +  label span:after, nav input:checked +  label span:before{
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	box-shadow:   0 -1px 4px rgba(0,0,0,.6) inset, 0 1px 4px rgba(252,255,255,.7) inset, 0 1px 4px -1px rgba(0,0,0,.8), 0 0 0 #f6f6f6;
+	position: absolute;
+	top: -8px;
+	left: 24px;
+	border-radius: 100%;
+}
+nav input:checked +  label span:after{
+	left: -5px;
+	top: 4px;
+}
+nav input:checked +  label:before, nav input:checked +  label:after{
+	display: block;
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	box-shadow:   0 -1px 4px rgba(0,0,0,.6) inset, 0 1px 4px rgba(252,255,255,.7) inset, 0 1px 4px -1px rgba(0,0,0,.8), 0 0 0 #f6f6f6;
+	position: absolute;
+	top: 24px;
+	left: 24px;
+	border-radius: 100%;
+}
+nav input:checked +  label:before{
+	left: 5px;
+	z-index: 1;
+	top: 12px;
+}
+nav input:checked +  label:after{
+	left: 34px;
+}
+nav input:checked ~ .nav{
+	opacity: 1;
+	width: 150px;
+	visibility: visible;
+	z-index: 10;
+}
+.nav li{
+	float: none;
+	text-align: left;
+}
+.nav li a{
+	margin-left: 40px;
+}
+.nav li a::after {
+    border-radius: 100%;
+    bottom: 8px;
+    height: 20px;
+    left: -5px;
+    width: 20px;
+}
+.nav li a::before {
+    right: 7px;
+    top: 6px;
+}
+.nav li a:hover::before {
+    opacity: 0.7;
+}
+.dog{
+	opacity: 0.8;
+}
+main {
+    width: 460px;
+}
+.image {
+    float: none;
+    margin: 0 auto 20px;
+    width: 101px;
+}
+.gray{
+	width: 58px;
+}
+.general-information h2{
+	text-align: center;
+}
+.button{
+	float: right;
+}
+.content{
+	padding: 55px 10px 15px;
+}
+.content .column{
+	width: 100%;
+	float: none;
+}
+.content .column > h3, 
+.content .column > h2{
+	text-align: center;
+}
+.content .box {
+    float: left;
+    margin-left: 10px;
+}
+.content .block {
+    width: 110px;
+    margin-top: 0;
+}
+.accordion {
+    clear: both;
+    margin: 0 auto 20px;
+    width: 250px;
+}
+.content .column:nth-of-type(2) {
+    width: 100%;
+}
+.content .column:nth-of-type(2) .box{
+	float: none;
+	margin: 0;
+}
+.content .column:nth-of-type(2) img {
+    margin: 0 auto 20px;
+    width: 247px;
+}
+.content .column:nth-of-type(2) .block {
+    margin: 0 auto;
+    width: 400px;
+}

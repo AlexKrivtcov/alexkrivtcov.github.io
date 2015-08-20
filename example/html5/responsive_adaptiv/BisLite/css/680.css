@@ -1,0 +1,355 @@
+header {
+    padding: 10px;
+}
+.menu {
+	padding: 0;
+	position: relative;
+}
+.menu label{
+	display: block;
+	width: 52px;
+	height: 52px;
+	border-radius: 5px;
+	border-top: 1px solid #6ec2ca;
+	background-color: #81e4ed;
+	cursor: pointer;
+	position: relative;
+	
+}
+.menu label span, .menu label span:before, .menu label span:after{
+	display: block;
+	width: 77%;
+	height: 4px;
+	background-color: #fff;
+	position: absolute;
+	top: 45%;
+	left: 6px;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+.menu label span:before, .menu label span:after{
+	content: "";
+	width: 100%;
+	top: 10px;
+	left: 0;
+}
+.menu label span:after{
+	top: -10px;
+}
+.menu input:checked + label>span{
+	-webkit-transform: rotate(450deg);
+	-moz-transform: rotate(450deg);
+	-ms-transform: rotate(450deg);
+	-o-transform: rotate(450deg);
+	transform: rotate(450deg);
+}
+.menu input:checked + label>span:before{
+	-webkit-transform: rotate(-45deg) scaleX(0.5);
+	-moz-transform: rotate(-45deg) scaleX(0.5);
+	-ms-transform: rotate(-45deg) scaleX(0.5);
+	-o-transform: rotate(-45deg) scaleX(0.5);
+	transform: rotate(-45deg) scaleX(0.5);
+	-webkit-transform-origin: right bottom;
+	-moz-transform-origin: right bottom;
+	-ms-transform-origin: right bottom;
+	-o-transform-origin: right bottom;
+	transform-origin: right bottom;
+	top: 0;
+}
+.menu input:checked + label>span:after{
+	-webkit-transform: rotate(45deg) scaleX(0.5);
+	-moz-transform: rotate(45deg) scaleX(0.5);
+	-ms-transform: rotate(45deg) scaleX(0.5);
+	-o-transform: rotate(45deg) scaleX(0.5);
+	transform: rotate(45deg) scaleX(0.5);
+	-webkit-transform-origin: right bottom;
+	-moz-transform-origin: right bottom;
+	-ms-transform-origin: right bottom;
+	-o-transform-origin: right bottom;
+	transform-origin: right bottom;
+	top: -1px;
+	left: -3px;
+}
+nav{
+	z-index: -10;
+	position: absolute;
+	width: 200px;
+	top: 62px;
+	right: -10px;
+	background-color: #e8ebf1;
+	visibility: hidden;
+	opacity: 0;
+	border: 1px solid #d9d9d9;
+	border-right: none;
+	-moz-transition: all 0.7s;
+	-webkit-transition: all 0.7s;
+	-ms-transition: all 0.7s;
+	-o-transition: all 0.7s;
+	transition: all 0.7s;
+}
+.menu input:checked ~ nav{
+	visibility: visible;
+	opacity: 1;
+	z-index: 10;
+} 
+.menu input:checked ~ nav>ul>li a{
+	display: block;
+}
+nav>ul>li:first-child{
+	border-top: none;
+}
+nav>ul>li{
+	float: none;
+	margin: 0;
+	border-top: 1px solid #6ec2ca;
+}
+li.drop-holder{
+	margin: 0;
+}
+li.drop-holder:after{
+	right: auto;
+	left: 8px;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+li.drop-holder > a{
+	padding-right: 10px;
+}
+nav>ul>li>a{
+	display: block;
+	padding: 8px 10px 8px 25px;
+}
+.drop{
+	text-align: left;
+	top: 0;
+	left: auto;
+	right: 200px;
+	border-top: 1px solid #e8ebf1;
+}
+
+.list_tabs li a{
+	height: 20px;
+	width: 20px;
+}
+@media screen and (max-width: 680px){
+	.list p {
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+@media screen and (max-width: 650px){
+	.list p {
+		font-size: 28px;
+		line-height: 38px;
+	}
+}
+@media screen and (max-width: 620px){
+	.list p {
+		font-size: 26px;
+		line-height: 36px;
+	}
+}
+@media screen and (max-width: 590px){
+	.list p {
+		font-size: 24px;
+		line-height: 34px;
+	}
+}
+@media screen and (max-width: 560px){
+	.list p {
+		font-size: 22px;
+		line-height: 32px;
+	}
+}
+.options {
+    padding: 20px 0 0;
+}
+.block {
+	margin: 0;
+    padding: 0 2% 20px;
+    width: 50%;
+}
+.block p {
+    text-align: justify;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.block a{
+	font-size: 14px;
+}
+#main{
+	padding-bottom: 20px;
+}
+#main h2 {
+    margin: 0 15% 16px 2%;
+}
+#main .box p{
+	text-align: justify;
+	margin-bottom: 10px;
+    padding-right: 0;
+}
+.jcarousel-wrapper{
+	padding: 20px 0;
+}
+.jcarousel li {
+	margin-right: 40px;
+}
+.jcarousel-control-prev, 
+.jcarousel-control-next{
+	right: 70px;
+	height: 25px;
+	width: 25px;
+	font-size: 24px;
+	line-height: 22px;
+}
+.jcarousel-control-next{
+	right: 30px;
+}
+.jcarousel-control-prev:hover,
+.jcarousel-control-next:hover{
+	line-height: 22px;
+}
+.partner {
+    margin: 19px 2% 20px;
+}
+.partner .box{
+	margin: 0 0 20px;
+	width: 100%;
+}
+#main .box:last-of-type {
+	width: 100%;
+}
+table {
+    margin: 0 auto;
+    width: 80%;
+}
+td{
+	height: auto;
+}
+td a img {
+    height: auto;
+    width: 80%;
+}
+.download{
+	margin: 0 2%;
+	padding: 20px 3%;
+}
+.download .box {
+    width: 100%;
+}
+.button {
+    font-size: 15px;
+    line-height: 17px;
+    padding: 15px 0 15px 51px;
+    width: 200px;
+}
+footer {
+    padding: 20px 3%;
+}
+.footer-top {
+    margin-bottom: 5px;
+}
+.footer-top .unit{
+	width: 32%;
+	margin: 0 1% 15px 0;
+}
+.footer-top .unit p {
+    margin: 0;
+}
+.footer-top .about {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.footer-top .connect{
+	width: 100%;
+}
+.connect h2, .about h2{
+	text-align: center;
+}
+.social{
+	text-align: center;
+}
+.social a{
+	float: none;
+	display: inline-block;
+}
+.social a:nth-of-type(3n), .social a{
+	margin: 0 4% 0 0;
+}
+.footer-bottom .unit {
+    width: 70%;
+}
+/*portfolio*/
+.portfolio{
+	padding: 20px 0 0;
+}
+.content {
+    margin: 0 2%;
+    padding-top: 0;
+}
+.tabs label {
+    margin: 0 0 5px;
+    padding: 6px 10px;
+}
+.image, .image:nth-of-type(4n){
+	margin: 0 2% 10px 0;
+	width: 49%;
+}
+.image:nth-of-type(2n) {
+    margin-right: 0;
+}
+.page {
+    padding: 20px 0 0;
+}
+/*contuct us*/
+#main.communications {
+    padding: 20px 2%;
+}
+#main.communications .content {
+    width: 100%;
+}
+.row {
+	overflow: hidden;
+}
+.row label{
+	width: 25%;
+	float: left;
+}
+.animation{
+	width: 55%;
+	float: right;
+}
+#area{
+	height: 0;
+	-webkit-transition: all 0.7s linear;
+	-moz-transition: all 0.7s linear;
+	-ms-transition: all 0.7s linear;
+	-o-transition: all 0.7s linear;
+	transition: all 0.7s linear;
+}
+#area:hover, #area:focus{
+	height: 160px;
+}
+aside {
+    width: 100%;
+}
+.map {
+    margin-bottom: 20px;
+    width: 50%;
+    float: left;
+}
+iframe {
+    height: auto;
+    width: 100%;
+}
+#main aside .box:last-of-type{
+	width: 45%;
+	margin: 0;
+	float: right;
+}

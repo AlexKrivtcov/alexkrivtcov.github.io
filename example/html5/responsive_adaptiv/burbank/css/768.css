@@ -1,0 +1,336 @@
+#wrapper{
+	width: 768px;
+}
+header{
+	padding: 0 0 12px 0;
+	background-position: 0 35px;
+}
+.plan{
+	margin-right: 15px;
+}
+.looking{
+	float: right;
+}
+.social, .book, .gallery-min, .right-column{
+	display: none;
+}
+.top-header{
+	padding-right: 21px;
+}
+nav{
+	margin-right: 0;
+}
+nav>ul>li>a{
+	padding: 10px 29px 9px 26px;
+}
+nav>ul>li:hover>a, nav>ul>li.active>a{
+	padding: 10px 31px 9px 28px;
+}
+.gallery1{
+	width: 768px;
+}
+.nav-gallery {
+    left: 41%;
+}
+.list li img{
+	margin-left: -225px;
+}
+.list .row b {
+    padding: 3px 0 2px;
+}
+.list .row span, 
+.list .row strong,
+.nav-gallery {
+    padding: 0 18px 0 0;
+}
+.left-column{
+	width: 600px;
+}
+.content .block {
+    width: 684px;
+    padding-bottom: 15px;
+}
+h1{
+	background: url(../img/h12.png) no-repeat 0 0;
+	width: 481px;
+	height: 111px;
+	margin: 0 0 28px;
+}
+.block-768{
+	display: block;
+	margin: 0 0 0 3px;
+}
+.block-768 h2{
+	font-size: 12px;
+	line-height: 14px;
+	margin: 0 0 8px;
+}
+.box{
+	overflow: hidden;
+	margin: 0 0 19px;
+}
+.pict{
+	width: 138px;
+	height: 129px;
+	margin-right: 13px;
+	overflow: hidden;
+	float: left;
+}
+.pict img{
+	height: 129px;
+	width: auto;
+}
+.text{
+	width: 440px;
+}
+.text h3{
+	font-size: 19.5px;
+	line-height: 22px;
+	margin: 0;
+}
+.text span{
+	display: block;
+	font-size: 11px;
+	line-height: 13px;
+	color: #2a4a84;
+	margin-bottom: 14px;
+}
+.text p{
+	margin-bottom: 18px;
+}
+.button{
+	width: 121px;
+	font-size: 11px;
+}
+.trip section{
+	width: 688px;
+}
+.tour{
+	width: 100%;
+	padding-bottom: 16px;
+}
+.tour .text{
+	width: 485px;
+}
+.tour .text h3 {
+    margin: 0 0 12px;
+}
+.trip section>a{
+	display: none;
+}
+footer{
+	overflow: hidden;
+	padding: 6px 0 40px;
+}
+.partners{
+	float: left;
+    width: 235px;
+    padding: 9px 10px 0;
+    position: relative;
+}
+.partners .airport{
+	width: 66px;
+	height: 64px;
+	float: right;
+	background: url(../img/airport2.png) no-repeat 0 0;
+}
+.partners .downtown{
+	width: 156px;
+	height: 36px;
+	margin-top: 17px;
+	background: url(../img/downtown2.png) no-repeat 0 0;
+}
+.partners .city{
+	background: url(../img/city2.png) no-repeat 0 0;
+	width: 56px;
+	position: absolute;
+	top: 12px;
+	left: 8px;
+}
+.footer-bottom {
+	background-color: #fff;
+    float: right;
+    padding: 0;
+    text-align: left;
+    width: 525px;
+}
+.footer-nav {
+    margin: 0 0 16px;
+    font-size: 0;
+}
+.footer-nav li{
+	padding: 13px 0 12px;
+	border-bottom: 1px solid #bebebe;
+}
+.footer-nav li:nth-child(5n) a{
+    border: medium none;
+    padding-right: 90px;
+}
+ .footer-nav li:last-child a{
+ 	padding-right: 95px;
+ }
+.footer-nav li a {
+	margin: 0;
+	font-size: 14px;
+	padding: 0 16px 0 11px;
+}
+.footer-nav li:first-child a{
+	padding-left: 0;
+}
+.footer-bottom span {
+    font-size: 14.7px;
+    padding-left: 4px;
+}
+.fixed-line .line{
+	max-width: 740px;
+	padding: 6px 0 4px;
+}
+.connect span{
+	font-size: 20px;
+	line-height: 22px;
+	margin: 4px 11px 0 0;
+}
+.connect a{
+	width: 29px;
+	height: 29px;
+	margin-right: 15px;
+}
+.connect .facebook{
+	width: 27px;
+	height: 27px;
+	background-position: 0 -40px;
+}
+.connect .linkedin{
+	width: 28px;
+	background-position: -27px -40px;
+}
+.connect .youtube{
+	background-position: -56px -40px;
+}
+.connect .pinterest{
+	width: 31px;
+	height: 31px;
+	background-position: -85px -40px;
+}
+.connect .google{
+	background-position: -116px -40px;
+}
+.connect .tripadvisor{
+	width: 48px;
+	height: 30px;
+	background-position: -145px -40px;
+}
+.line .book{
+	display: block;
+	margin: 5px 16px 0;
+}
+.line .book > a {
+    padding-left: 36px;
+}
+.book .drop {
+    left: auto;
+    right: -10px;
+}
+/*landing*/
+.main{
+    width: 725px;
+}
+.share .main{
+	padding-top: 121px;
+}
+.basic {
+    width: 435px;
+}
+.category {
+     margin-bottom: 37px;
+    padding-bottom: 9px;
+}
+.general .proposition {
+    float: none;
+    margin: 0 0 0 8px;
+    padding-top: 37px;
+}
+.general .proposition .tour .text p{
+	margin-bottom: 0;
+}
+/*contacts*/
+.string{
+	margin-bottom: 0;
+}
+.string .cell{
+	margin-bottom: 25px;
+}
+/*detail*/
+
+.detail .main {
+    padding: 33px 0 0 5px;
+}
+.detail aside{
+	width: 200px;
+}
+.map:before, .map:after {
+	width: 100px;
+}
+
+.map iframe {
+	height: 145px;
+    width: 145px;
+}
+aside .block {
+    text-align: center;
+}
+
+aside .block img {
+    display: inline-block;
+    float: none;
+    margin: 0;
+}
+aside .block .text {
+    width: 100%;
+}
+aside .block .text .button.short {
+    display: inline-block;
+}
+.detail .basic {
+    width: 490px;
+}
+.connected-carousels .navigation {
+    width: 455px;
+}
+.connected-carousels .carousel-navigation {
+    width: 400px;
+}
+.connected-carousels .carousel-stage {
+    height: 320px;
+}
+.connected-carousels .carousel-stage img {
+    height: 320px;
+    width: auto;
+}
+/*list-page*/
+.list-page .main {
+    padding: 50px 0 53px;
+    width: 668px;
+}
+.list-page .basic {
+    width: 427px;
+}
+.list-page .basic > h2 {
+    line-height: 37px;
+    margin-bottom: 19px;
+}
+
+.list-page .basic h2>strong, .general>h2>strong {
+    display: block;
+}
+
+.list-page .offer .text {
+    padding: 0;
+    width: 225px;
+}
+.list-page .offer p {
+    margin-bottom: 6px;
+}
+.text h3 span{
+	margin: 0;
+}
