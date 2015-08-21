@@ -1,0 +1,82 @@
+
+#wrapper {
+    width: 620px;
+}
+header::before{
+	display: none;
+}
+h1 {
+    margin-bottom: 15px;
+}
+#logo:focus, #logo:hover {
+    -webkit-transform: scale(1.2);
+       -moz-transform: scale(1.2);
+    	-ms-transform: scale(1.2);
+    	 -o-transform: scale(1.2);
+    		transform: scale(1.2);
+}
+.roof {
+    width: 420px;
+}
+.gallery-holder {
+    width: 415px;
+    font-size: 12px;
+    line-height: 14px;
+}
+.list li h2 {
+    margin-bottom: 10px;
+}
+.list li h3 {
+    margin-bottom: 7px;
+}
+.list li p {
+    margin-bottom: 5px;
+}
+#slide-switcher li a {
+    margin: 0 29px 0 0;
+    width: 82px;
+}
+.wall {
+    width: 585px;
+    padding-bottom: 100px;
+}
+#portfolio>h2{
+	-webkit-transform: scale(0.8);
+	   -moz-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		 -o-transform: scale(0.8);
+			transform: scale(0.8);
+}
+.block {
+    padding: 10px 40px 0;
+}
+.block .window:nth-of-type(2n){
+	margin-right: 0;
+}
+.block .window{
+    margin-right: 25.9%;
+}
+.door{
+	display: none;
+}
+#contacts{
+	height: 240px;
+    width: 275px;
+	float: none;
+	margin: 0 auto;
+}
+#contacts h2{
+	padding-bottom: 10px;
+	background-size: 80% 1px;
+}
+.connection{
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+	        transform: scale(1);
+}
+.up {
+    bottom: -20px;
+    right: 15%;
+}

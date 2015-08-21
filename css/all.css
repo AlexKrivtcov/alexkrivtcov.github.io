@@ -847,7 +847,6 @@ h2{
 }
 #contacts:hover h2{
 	padding-bottom: 10px;
-	width: 100%;
 	background-size: 80% 1px;
 }
 #contacts:hover{
