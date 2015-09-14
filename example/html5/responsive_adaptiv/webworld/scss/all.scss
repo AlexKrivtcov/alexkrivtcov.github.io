@@ -1,0 +1,847 @@
+@mixin fo-face($family){
+	@font-face {
+    font-family: '#{$family}';
+    src: url('../fonts/#{$family}.eot');
+    src: url('../fonts/#{$family}.eot') format('embedded-opentype'),
+         url('../fonts/#{$family}.woff2') format('woff2'),
+         url('../fonts/#{$family}.woff') format('woff'),
+         url('../fonts/#{$family}.ttf') format('truetype'),
+         url('../fonts/#{$family}.svg##{$family}') format('svg');}
+}
+@include fo-face(PTSansRegular);
+@include fo-face(Pacifico);
+@include fo-face(OpenSansRegular);
+@include fo-face(OpenSansBold);
+$col-hover: #00bac6;
+$col-base: #8b8b8b;
+body {
+	margin: 0;
+	color: $col-base;
+	background: #fff;
+	min-width: 480px;
+	font: 14px/16px  'PTSansRegular';
+}
+form, fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+img {border-style: none;}
+input, select, textarea {
+	vertical-align: middle;
+	outline: none;
+	cursor: pointer;
+}
+input::-webkit-search-cancel-button{
+	display: none;
+}
+h1, h2, h3, h4, h5, p{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a, a:hover{
+	color: $col-base;
+	text-decoration: none;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin transition($type: all, $time: 0.5s, $kind: linear, $delay: 0s){
+	-webkit-transition: $type, $time, $kind, $delay;
+	   -moz-transition: $type, $time, $kind, $delay;
+		-ms-transition: $type, $time, $kind, $delay;
+		 -o-transition: $type, $time, $kind, $delay;
+			transition: $type, $time, $kind, $delay;
+}
+@mixin gradient($first_color, $second_color, $first_color2, $second_color2){
+		@if $first_color2==null and $second_color2==null{
+				background: $first_color;
+		-webkit-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		   -moz-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		  	-ms-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		  	 -o-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		  		background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		}	
+		@else {
+			background: $first_color;
+	background: -webkit-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+				-webkit-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+	   background: -moz-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+	   			   -moz-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+		background: -ms-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+					-ms-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+		 background: -o-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+		 			 -o-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+			background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0,
+						linear-gradient(0deg, $first_color2, $second_color2) no-repeat 0 0;
+		}
+}
+@mixin border($place, $width, $color) {
+	 @if $place == 'all' {
+	 border: $width solid $color;
+	 } 
+	 @else {
+	 border-#{$place}: $width solid $color;
+	 }
+}
+@mixin font($size, $height){
+  font-size: $size;
+  line-height: $height;
+}
+@mixin absolute($top, $right, $bottom, $left){
+	position: absolute;
+	top: #{$top};
+	left: #{$left};
+	bottom: #{$bottom};
+	right: #{$right};
+}
+@mixin transform($data){
+	-webkit-transform: $data;
+	-moz-transform: $data;
+	-ms-transform: $data;
+	-o-transform: $data;
+	transform: $data;
+}
+@mixin bg-position($top, $left){
+	background-position: #{$top} #{$left};
+}
+@mixin center{
+	max-width: 980px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 840px){
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+%bold_b{
+	font-family: 'OpenSansBold';
+	font-weight: normal;
+}
+%sprite{
+	display: inline-block;
+	content: "";
+	background: url(../img/sprite.png) no-repeat 0 0;
+}
+%clear{
+	display: block;
+	content: "";
+	clear: both;
+}
+header{
+	@include gradient(#252323, #252323, #efefef, #efefef);
+	background-size: 100% 60px, 100% 4px;
+	background-position: 0 0, 0 100%;
+
+	.header{
+		padding-top: 14px;
+		@include center;
+
+		&-top{
+			padding: 0 9px 15px 10px;
+			overflow: hidden;
+
+			h1{
+				float: left;
+
+				.logo{
+				font: 24px/26px "Pacifico";
+				color: #fff;
+				@include transition;
+				display: block;
+
+					&:hover,
+					&:focus{
+						color: $col-hover;
+
+						b{
+							color: #fff;
+						}
+					}
+
+					b{
+						@include transition;
+						font-weight: normal;
+						color: $col-hover;
+					}
+				}
+			}		
+		}
+
+		&-bottom{
+			padding: 21px 0 2px;
+
+			@media screen and (max-width: 780px){
+				padding-bottom: 20px;
+			}
+
+			&:after{
+				@extend %clear;
+			}
+
+			nav{
+				float: left;
+				position: relative;
+
+				ul {
+					float: left;
+
+					@media screen and (max-width: 780px){
+						visibility: hidden;
+						opacity: 0;
+						z-index: -1;
+						width: 200px;
+						padding:  15px;
+						text-align: center;
+						@include absolute(65px, auto, auto, -500px);
+						@include transition;
+
+					}
+
+					li {
+						float: left;
+						margin-right: 9px;
+
+						@media screen and (max-width: 780px){
+							float: none;
+							margin: 0;
+						}
+
+						a{
+							display: block;
+							text-transform: uppercase;
+							font-family: 'OpenSansRegular';
+							color: $col-base;
+							padding: 15px 10px 30px 10px;
+							@include gradient($col-hover, $col-hover, $col-hover, $col-hover);
+							background-position: 50% 100%;
+							background-size: 0 2px;
+							@include transition;
+
+							@media screen and (max-width: 780px){
+								padding-bottom: 13px;
+							}
+
+							&:hover,
+							&:focus,
+							&:active{
+								color: $col-hover;
+								background-size: 100% 2px;
+							}
+						}
+					}
+				}
+
+				#menu{
+						display: none;
+
+						&:checked + .menu{
+								@extend %menuhover;
+
+								+ul{
+									left: 0;
+									@include border(all, 2px, $col-hover);
+									border-radius: 5px;
+									visibility: visible;
+									opacity: 1;
+									
+									background-color: #fff;
+									@extend %bg-nav;
+									z-index: 20;	
+								}
+						}
+				}
+
+				%menuhover{
+					@include border(all, 2px, $col-hover);
+
+							span{
+								background-color: $col-hover;
+								box-shadow: 0 11px 0 $col-hover, 0 -11px 0 $col-hover;
+							}	
+				}
+
+				.menu{
+						@extend #menu;
+						cursor: pointer;
+						width: 50px;
+						height: 50px;
+						position: relative;
+						@include border(all, 2px, $col-base);
+						border-radius: 5px;
+						@include transition;
+
+						@media screen and (max-width: 780px){
+							display: block;
+						}
+
+						&:hover{
+							@extend %menuhover;
+						}
+
+						span{
+							@include absolute(20px, auto, auto, 5px);
+							width: 35px;
+							height: 5px;
+							background-color: $col-base;
+							box-shadow: 0 11px 0 $col-base, 0 -11px 0 $col-base;
+							@include transition;
+						}
+				}
+			}
+			.search{
+				float: right;
+				@include border(all, 1px, #d6d6d6);
+				border-radius: 2px;
+
+				input{
+					float: left;
+					border: none;
+					background: none;
+					height: 34px;
+
+					&.looking{
+						width: 158px;
+						color: #a6a6a6;
+						@include font(13px, 15px);
+						padding: 0 5px 0 20px;	
+					}
+
+					&[type="submit"]{
+						width: 30px;
+						background: url(../img/search.png) no-repeat 0 9px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
+.social{
+	float: right;
+
+	a{
+		float: left;
+		height: 26px;
+		background: url(../img/sprite.png) no-repeat 0 0;
+		margin: 4px 0 0 26px;
+		@include transition(all, 0.3s);
+	}
+	@each $social, $horizontal, $vertical, $width in 
+	(share, 0, 0, 22px),
+	(facebook, -22px, 0, 13px),
+	(twitter, -35px, 0, 25px),
+	(linkedin, -60px, 0, 25px){
+	.#{$social}{
+		background-position: $horizontal $vertical;
+		width: $width;
+
+			&:hover,
+			&:focus{
+					background-position: $horizontal -26px;
+					}
+		}
+	}
+}
+.gallery-holder{
+	width: 100%;
+	position: relative;
+
+	.list{
+		@extend .gallery-holder;
+		overflow: hidden;
+		margin: 0 auto;
+
+		li{
+			@include absolute(0, auto, auto, 0);
+			display: none;
+			width: 100%;
+
+			&.first{
+				position: relative;
+				display: block;
+				float: left;
+			}
+
+			img{
+				width: 100%;
+				height: auto;
+				float: left;
+			}
+			.box{
+				color: #fff;
+				@include absolute(36%, auto, auto, 50%);
+				text-align: center;
+				margin-left: -25%;
+				width: 50%;
+
+				@media screen and (max-width: 840px){
+					top: 20%;
+				}
+
+				h2{
+					font: 40px/42px 'OpenSansBold' {weight: normal};
+					text-transform: uppercase;
+					margin-bottom: 10px;
+
+					@media screen and (max-width: 780px){
+						@include font(26px, 28px);
+					}
+					@media screen and (max-width: 640px){
+						@include font(18px, 20px);
+
+						p{
+						@include font(12px, 14px);
+						}
+					}
+				}
+				
+				p{
+					@include font(15px, 18px);
+				}
+			}
+		}
+	}
+
+	.list_tabs{
+		@include absolute(auto, auto, 5%, 0);
+		z-index: 10;
+		width: 100%;
+		text-align: center;
+
+		li{
+			display: inline-block;
+			margin: 0 5px;
+
+			a{
+				display: block;
+				text-indent: -99999px;
+				width: 16px;
+				height: 16px;
+				@include border(all, 4px, #fff);
+				border-radius: 100%;
+				@include transition;
+
+				&:hover{
+					@include transform(scale(1.2));
+				}
+			}
+
+			&.list_here a, 
+			& a:hover{
+					background-color: $col-hover;
+			}
+		}
+	}
+
+	.prev{
+		@include absolute(41%, auto, auto, 14%);
+		display: block;
+		font-size: 0;
+		z-index: 10;
+		width: 25px;
+		height: 51px;
+		background: url(../img/arrow-l.png) no-repeat 0 0;
+	}
+	.next{
+		@extend .prev;
+		-webkit-transform: scale(-1);
+		   -moz-transform: scale(-1);
+			-ms-transform: scale(-1);
+			 -o-transform: scale(-1);
+				transform: scale(-1);
+		left: auto;
+		right: 14%;
+	}
+}
+@mixin checked($identety){
+	##{$identety}:checked ~ .#{$identety}_block{
+		display: block;
+	}
+}
+h4{
+	font: 20px/22px 'OpenSansRegular';
+	margin: 6px 0 15px;
+}
+main{
+	display: block;
+	padding: 50px 0 0;
+	@include gradient(#eee, #eee, null, null);
+	background-position: 0 545px;
+
+	@media screen and (max-width: 780px){
+		background-position: 0 565px;
+	}
+	@media screen and (max-width: 760px){
+		background-position: 0 600px;
+	}
+	@media screen and (max-width: 740px){
+		background-position: 0 595px;
+	}
+	@media screen and (max-width: 710px){
+		background-position: 0 615px;
+	}
+	@media screen and (max-width: 640px){
+		background-position: 0 465px;
+	}
+
+	section{
+		@include center;
+		text-align: center;
+
+	
+		h3{
+			font: 30px/32px 'OpenSansRegular';
+			letter-spacing: -0.7px;
+			margin-bottom: 23px;
+			text-transform: uppercase;
+
+			b{
+				@extend %bold_b;
+			}
+		}
+
+		>p{
+			@include font(15px, 20px);
+			margin-bottom: 42px;
+		}
+
+		.tabs{
+
+			input,
+			.tab{
+				display: none;
+			}
+
+			label{
+				display: inline-block;
+				cursor: pointer;
+				width: 30%;
+				margin: 0 3.5% 124px 0;
+				position: relative;
+				top: 0;
+				@include transition(all, 0.7s);
+
+				@media screen and (max-width: 840px){
+					margin-bottom: 92px;
+				}
+
+				&:last-of-type{
+					margin-right: 0;
+				}
+
+
+				&:before{
+					height: 118px;
+					@extend %sprite;
+				}
+
+				&:after{
+					@include absolute(auto, auto, -150px, 50%);
+					display: block;					
+					content: "";
+					margin-left: -40px;
+					@include transition;
+					height: 0;
+					width: 0;
+					@include border(all, 40px, transparent);
+				}
+
+				h4{
+
+					b{
+						@extend %bold_b;
+					}
+				}
+				@media screen and (max-width: 640px){
+					h4, p{
+						display: none;
+					}
+				}
+			}
+
+			@each $name, $horizontal, $vertical, $width in 
+					(monitor, 0, -52px, 114px),
+					(note, -114px, -52px, 118px),
+					(mountains, -231px, -52px, 127px){
+						label.#{$name}_img:before{
+							background-position: $horizontal $vertical;
+							width: $width;
+						}
+						label.#{$name}_img:hover::before,
+						label.#{$name}_img:focus::before,
+						##{$name}:checked + label.#{$name}_img:before{
+							background-position: $horizontal -170px;
+						}
+
+						##{$name}:checked + label{
+							top: 35px;
+							margin-bottom: (127px-35);
+
+							&::after{
+								@include border(bottom, 55px, #eee);
+								bottom: -95px;
+								@media screen and (max-width: 840px){
+									bottom: -56px;
+								}
+							}
+						}
+			}
+
+			@include checked(monitor);
+			@include checked(note);
+			@include checked(mountains);
+
+			.tab{
+				width: 100%;
+				overflow: hidden;
+				padding: 38px 0 20px;
+
+				.block{
+					display: block;
+					@include border(all, 1px, #c5c5c5);
+					width: 31.6%;
+					float: left;
+					margin-right: 2.6%;
+					margin-bottom: 26px;
+					text-align: left;
+
+					
+
+					&:nth-of-type(3n){
+						margin-right: 0;
+
+						@media screen and (max-width: 640px){
+							margin-right: 2.6%;
+						}
+					}
+
+					@media screen and (max-width: 640px){
+						width: 48.7%;
+
+						&:nth-of-type(2n){
+							margin-right: 0; 
+						}
+					}
+
+					.container{
+						overflow: hidden;
+						width: 100%;
+
+						img{
+							width: 100%;
+							height: auto;
+							display: block;
+							@include transition(all, 0.7s);
+						}
+
+					}
+					
+
+					.text{
+						margin: 20px 22px 22px;
+
+						h5{
+							@extend %bold_b;
+							@include font(14px, 16px);
+							margin-bottom: 5px;
+						}
+					}
+
+					&:hover img{
+						@include transform(scale(1.4));
+					}
+				}
+			}
+		}
+	}
+}
+.partners{
+	@include center;
+	padding: 45px 0;
+
+	ul {
+		overflow: hidden;
+
+		li{
+			width: 17.5%;
+			float: left;
+			margin-right: 10%;
+
+			&:nth-child(4n){
+				margin-right: 0;
+			}
+
+			@media screen and (max-width: 640px){
+				width: 45%;
+				text-align: center;
+
+				&:nth-child(4n){
+					margin-right: 10%;
+				}
+
+				&:nth-child(2n){
+					margin-right: 0;
+				}
+			}
+
+			a{
+				display: block;
+
+				img{
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+footer{
+		color: #c1c1c1;
+
+		a{
+			@extend footer;
+		}
+
+		.footer-wrapper-top{
+			padding: 30px 0 33px;
+			background: url(../img/footer-top.jpg) 0 0;
+
+			.footer-top{
+				@include center;
+				overflow: hidden;
+
+				.block{
+					margin-right: 6.5%;
+   					width: 20.1%;
+					float: left;
+
+					&:last-of-type{
+						margin-right: 0;
+					}
+
+					p{
+						line-height: 18px;
+						margin-bottom: 20px;
+					}
+
+					h4{
+						color: #fff;
+						@include font(22px, 24px);
+					}
+
+					@media screen and (max-width: 640px){
+						width: 46.7%;
+						margin-bottom: 20px;
+
+						&:nth-child(2n){
+							margin-right: 0;
+						}
+					}
+
+					.post li {
+								margin-bottom: 16px;
+   								padding: 0 0 21px;
+								@include border(bottom, 1px, #898989);
+
+								&:last-child{
+									border: none;
+								}
+
+								a {
+
+									p{
+										margin: 0 0 7px;
+									}
+
+									time{
+										color: #898989; 
+										&:before{
+											@extend %sprite;
+											background-position: -120px 0;
+											width: 14px;
+											height: 15px;
+											margin-right: 5px;
+											
+										}
+									}	
+								}
+					}
+
+					.tags li{
+						display: inline;
+
+							a{
+
+								span{
+									font-size: 20px;
+									color: #f5f5f5;
+
+									&:hover{
+										@extend a;
+									}
+								}
+							}
+					}
+
+					.contacts{
+							padding: 5px 0 0;
+
+						span{
+							display: block;
+							padding-left: 40px;
+							position: relative;
+							margin-bottom: 14px;
+
+							&:before{
+								@include absolute(auto, auto, 0, 0);
+								@extend %sprite;
+								width: 13px;
+								height: 20px;
+								@include bg-position(-134px, 0);
+							}
+
+							&.phone:before{
+								height: 13px;
+								@include bg-position(-164px, 0);
+							}
+
+							&.mail:before{
+								width: 17px;
+								height: 13px;
+								@include bg-position(-147px, 0);
+							}
+						}
+
+						
+					}
+				}
+			}
+		}
+
+		.footer-wrapper-bottom{
+			background: url(../img/footer-bottom.jpg) 0 0;
+			padding: 25px 0 33px;
+
+			.footer-bottom{
+				overflow: hidden;
+				@include center;
+
+				span{
+					float: left;
+					padding: 8px 0 0;
+				}
+
+				.social {
+					    margin-right: 45px;
+				}
+
+			}
+		}
+}
