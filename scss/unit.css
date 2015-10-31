@@ -347,7 +347,7 @@ body footer::before {
 }
 
 body footer #footer {
-  padding: 50px 30px 15px 10px;
+  padding: 50px 30px 0 10px;
   text-align: center;
   font-size: 12px;
   line-height: 14px;
