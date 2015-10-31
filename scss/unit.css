@@ -4,7 +4,7 @@ body header .navbar-default, body main, body footer #footer {
 }
 
 body, body header {
-  background: #8a9cb2 url(../img/Jeans.jpg);
+  background: #8a9cb2 url(../img/jeans.jpg);
 }
 
 body main div[class^="col-"] .circle:hover, body footer #footer .box .wrapper-stitch .stitch .social li:hover, body footer #footer .box .wrapper-stitch .stitch .social li:active {
