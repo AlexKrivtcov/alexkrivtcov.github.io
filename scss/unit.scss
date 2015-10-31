@@ -85,6 +85,7 @@
 	z-index: 1;
 }
 body{
+	min-width: 480px;
 	@extend %jeans;
 	box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
 
@@ -93,8 +94,7 @@ body{
 		z-index: 5;
 		width: 100%;
 		@extend %jeans;
-		padding-bottom: 5px;
-		padding-top: 5px;
+		padding: 5px 10px 5px 10px;
 		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8), 0px -2px 5px -1px #000 inset, 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
 		
 		&::after{
@@ -342,10 +342,11 @@ body{
 				@extend %patch;
 				border-radius: 0 0 70px 70px;
 				padding: 15px;
-				width: 500px;
+				width: 100%;
 				position: relative;
 				display: flex;
-				min-height: 250px;
+				min-height: 210px;
+				margin: 0 15px 30px;
 
 				&:before{
 					@extend %button;
@@ -478,7 +479,89 @@ body{
 			}
 		}
 	}
-	
 }
+@media (max-width: 840px) {
+    .navbar-header {
+        float: none;
 
+        .navbar-toggle {
+        	padding: 14px 12px;
+        	border: none;
+	        display: block;
+			background: #673435 url(../img/redjeans.jpg);
+			box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.6) inset, 0 3px 2px rgba(252, 255, 255, 0.4) inset, 0 1px 4px 0px rgba(0, 0, 0, 0.8);
 
+			&:hover, &:focus{
+				box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.7) inset, 0 0 0 #000 inset, 0px 3px 3px 0px rgba(255, 255, 255, 0.7);
+			}
+
+			.icon-bar{
+				width: 30px;
+				height: 2px;
+				background-color: #fff;
+
+				& + .icon-bar{
+					margin-top: 6px;
+				}
+			}
+	    }
+    }
+    .navbar-default{
+    	.navbar-collapse {
+    		margin-top: 100px;
+			@include border(top, 2px, dashed, #FFBE40);
+			padding: 5px 40px;
+
+	        &.collapse {
+		        display: none!important;
+		    }
+
+	        .navbar-right {
+		        float: none !important;
+		    }
+
+		     .navbar-nav {
+		        float: none!important;
+				margin-top: 7.5px;
+
+				li {
+			        float: none;
+			        margin-bottom: 10px;
+
+			        a {
+				        padding-top: 10px;
+				        padding-bottom: 10px;
+				    }
+			    }
+			}
+	    }
+	   .collapse.in{
+	  		display:block !important;
+		}
+    }
+}
+@media screen and (max-width: 768px){
+	body{
+
+		footer{
+			#footer{
+
+				.row {
+					display: block;
+				}
+
+				[class*="col-"] {
+					display: block;
+				}
+				.box{
+					display: block;
+
+					.wrapper-stitch{
+						display: block;
+					}
+
+				}
+			}
+		}
+	}	
+}
