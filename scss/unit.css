@@ -1,0 +1,488 @@
+body header .navbar-default, body main, body footer #footer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body, body header {
+  background: #8a9cb2 url(../img/Jeans.jpg);
+}
+
+body main div[class^="col-"] .circle:hover, body footer #footer .box .wrapper-stitch .stitch .social li:hover, body footer #footer .box .wrapper-stitch .stitch .social li:active {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.7) inset, 0 0 0 #000 inset, 0px 3px 3px 0px rgba(255, 255, 255, 0.7);
+}
+
+body header .navbar-default .navbar-brand .stitch {
+  border: 2px dashed #FFBE40;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: #6F370F;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+body main div[class^="col-"] .circle, body footer #footer .box {
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.6) inset, 1px 2px 8px rgba(252, 255, 255, 0.7) inset, 0 3px 10px 3px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 50, 0.3);
+}
+
+body header::before, body footer::before, body footer #footer .box .wrapper-stitch:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 19px;
+  border-top: 2px dashed #FFBE40;
+  border-bottom: 2px dashed #FFBE40;
+}
+
+body footer #footer .box:before, body footer #footer .box:after, body footer #footer .box .wrapper-stitch .stitch .social li {
+  border-radius: 100%;
+  background: url(../img/bronze.jpg);
+  box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.6) inset, 0 3px 2px rgba(252, 255, 255, 0.4) inset, 0 1px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+body footer #footer .box:before, body footer #footer .box:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  bottom: auto;
+  right: auto;
+  z-index: 1;
+}
+
+body {
+  box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+}
+
+body header {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8), 0px -2px 5px -1px #000 inset, 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+}
+
+body header::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 50, 0.3);
+  z-index: -1;
+}
+
+body header::before {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 15px;
+  right: auto;
+  z-index: 1;
+}
+
+body header .navbar-default {
+  border: none;
+  background-color: transparent;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+body header .navbar-default .navbar-brand {
+  border-radius: 5px;
+  background: url(../img/leather.jpg);
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.6) inset, 1px 2px 3px rgba(252, 255, 255, 0.7) inset, 0 0px 8px 0px #000;
+  height: 130px;
+  padding: 10px;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  bottom: auto;
+  right: auto;
+  z-index: 12;
+}
+
+body header .navbar-default .navbar-brand:hover, body header .navbar-default .navbar-brand:focus {
+  background: url(../img/leather.jpg);
+}
+
+body header .navbar-default .navbar-brand:hover .skitch span, body header .navbar-default .navbar-brand:focus .skitch span {
+  color: #6F370F;
+}
+
+body header .navbar-default .navbar-brand .stitch {
+  height: 100%;
+  padding: 20px 30px;
+}
+
+body header .navbar-default .navbar-brand .stitch span {
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+  color: #8B4513;
+  display: block;
+  text-transform: none;
+  margin-bottom: 15px;
+}
+
+body header .navbar-default .navbar-nav > li {
+  padding: 3px;
+  -webkit-transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s;
+  -ms-transition: all 0.5s linear 0s;
+  -o-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+  border-style: solid;
+  border-width: 17px;
+  -webkit-border-image: url(../img/12.png) 16 17 16 16 fill round;
+  -moz-border-image: url(../img/12.png) 16 17 16 16 fill round;
+  -o-border-image: url(../img/12.png) 16 17 16 16 fill round;
+  border-image: url(../img/12.png) 16 17 16 16 fill round;
+}
+
+body header .navbar-default .navbar-nav > li:hover a, body header .navbar-default .navbar-nav > li:focus a {
+  color: #FFBE40;
+}
+
+body header .navbar-default .navbar-nav > li.active a {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+  color: #FFBE40;
+  background: none;
+  border-color: #fff;
+}
+
+body header .navbar-default .navbar-nav > li.active:hover a, body header .navbar-default .navbar-nav > li.active:focus a {
+  color: #fff;
+  background: none;
+}
+
+body header .navbar-default .navbar-nav > li > a {
+  border-radius: 10px;
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  border: 1px dashed transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px;
+}
+
+body header .navbar-default .navbar-nav > li > a:focus, body header .navbar-default .navbar-nav > li > a:hover {
+  color: #FFBE40;
+  border-color: transparent;
+  outline: none;
+}
+
+body main {
+  display: block;
+  padding-top: 150px;
+}
+
+body main div[class^="col-"] {
+  text-align: center;
+}
+
+body main div[class^="col-"] .circle {
+  overflow: hidden;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  -webkit-transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s;
+  -ms-transition: all 0.5s linear 0s;
+  -o-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+  position: relative;
+  margin-bottom: 30px;
+  padding: 18px;
+}
+
+body main div[class^="col-"] .circle:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 0px;
+  -webkit-transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s;
+  -ms-transition: all 0.5s linear 0s;
+  -o-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+  z-index: 1;
+}
+
+body main div[class^="col-"] .circle:hover .circle-inside img {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  filter: grayscale(0);
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  filter: url("../js/filters.svg#grayscale");
+  filter: none;
+  /* Applies to FF + IE */
+  -webkit-filter: grayscale(0);
+}
+
+body main div[class^="col-"] .circle:hover .info {
+  height: 130px;
+}
+
+body main div[class^="col-"] .circle:hover svg circle.stroke-yellow {
+  stroke: #fff;
+}
+
+body main div[class^="col-"] .circle svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: auto;
+  right: auto;
+}
+
+body main div[class^="col-"] .circle svg circle {
+  stroke-width: 2;
+  fill: none;
+}
+
+body main div[class^="col-"] .circle svg circle.stroke-yellow {
+  stroke: #FFBE40;
+  stroke-dasharray: 7,7;
+}
+
+body main div[class^="col-"] .circle svg circle.stroke-grey {
+  stroke: rgba(0, 0, 0, 0.3);
+  stroke-width: 6;
+}
+
+body main div[class^="col-"] .circle .circle-inside {
+  border-radius: 100%;
+  width: 264px;
+  height: 264px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+body main div[class^="col-"] .circle .circle-inside img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  filter: url("../js/filters.svg#grayscale");
+}
+
+body main div[class^="col-"] .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 0px;
+  -webkit-transition: all 0.5s linear 0s;
+  -moz-transition: all 0.5s linear 0s;
+  -ms-transition: all 0.5s linear 0s;
+  -o-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
+  z-index: 1;
+  padding: 0 15px;
+}
+
+body main div[class^="col-"] .info h2 {
+  margin: 15px 0 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #FFBE40;
+}
+
+body footer {
+  background-color: rgba(0, 0, 50, 0.3);
+  position: relative;
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.8), 0px 2px 5px -1px #000 inset, 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+}
+
+body footer::before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  bottom: auto;
+  right: auto;
+  z-index: 1;
+}
+
+body footer #footer {
+  padding: 50px 0 15px;
+  text-align: center;
+}
+
+body footer #footer .row {
+  display: flex;
+}
+
+body footer #footer [class*="col-"] {
+  display: flex;
+}
+
+body footer #footer .box {
+  border-radius: 0 0 70px 70px;
+  padding: 15px;
+  width: 500px;
+  position: relative;
+  display: flex;
+  min-height: 250px;
+}
+
+body footer #footer .box:after {
+  left: auto;
+  right: 13px;
+}
+
+body footer #footer .box .copyright {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-size: 10px;
+  line-height: 12px;
+  position: absolute;
+  top: 90px;
+  left: -79px;
+  bottom: auto;
+  right: auto;
+  color: #fff;
+  background: url(../img/yellowcotton.jpg);
+  padding: 5px 10px;
+  box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.7) inset, 0px 2px 7px rgba(255, 255, 255, 0.5) inset;
+  border-radius: 3px;
+}
+
+body footer #footer .box h3 {
+  position: absolute;
+  top: 0;
+  left: auto;
+  bottom: auto;
+  right: 50px;
+  background: #673435 url(../img/redjeans.jpg);
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 4px;
+  margin: 0;
+  z-index: 1;
+  box-shadow: 0 2px 5px #000, 0 3px 5px rgba(255, 255, 255, 0.5) inset;
+}
+
+body footer #footer .box h3 span {
+  display: block;
+  border: 1px dashed #FFBE40;
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  padding: 10px;
+}
+
+body footer #footer .box .wrapper-stitch {
+  display: flex;
+  width: 100%;
+  border: 2px dashed #FFBE40;
+  border-radius: 0 0 50px 50px;
+  padding: 0 15px 15px 15px;
+  border-top: none;
+  position: relative;
+}
+
+body footer #footer .box .wrapper-stitch:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  right: auto;
+}
+
+body footer #footer .box .wrapper-stitch .stitch {
+  width: 100%;
+  border: 2px dashed #FFBE40;
+  border-top: none;
+  border-radius: 0 0 40px 40px;
+  padding: 45px 15px 15px 15px;
+  color: #fff;
+}
+
+body footer #footer .box .wrapper-stitch .stitch .social {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+body footer #footer .box .wrapper-stitch .stitch .social li {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 0 20px;
+}
+
+body footer #footer .box .wrapper-stitch .stitch .social li a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  font-size: 25px;
+  line-height: 40px;
+  color: #6F370F;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+body footer #footer .box .wrapper-stitch .stitch .social li a:focus, body footer #footer .box .wrapper-stitch .stitch .social li a:hover {
+  text-decoration: none;
+}
+
+body footer #footer .box .wrapper-stitch .stitch .social li:hover a, body footer #footer .box .wrapper-stitch .stitch .social li:active a {
+  text-decoration: none;
+}
+
+body footer #footer .box .wrapper-stitch .stitch span {
+  display: block;
+  color: #fff;
+}
+
+body footer #footer .box .wrapper-stitch .stitch span a {
+  color: #fff;
+}
+
+body footer #footer .box .wrapper-stitch .stitch span a:hover, body footer #footer .box .wrapper-stitch .stitch span a:focus {
+  color: #fff;
+}

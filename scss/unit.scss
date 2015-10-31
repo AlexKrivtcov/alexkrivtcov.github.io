@@ -1,0 +1,474 @@
+@mixin absolute($top: 0, $right: auto, $bottom: auto, $left: 0){
+	position: absolute;
+	top: #{$top};
+	left: #{$left};
+	bottom: #{$bottom};
+	right: #{$right};
+}
+@mixin transition($type: all, $time: 0.5s, $kind: linear, $delay: 0s){
+	-webkit-transition: $type $time $kind $delay;
+	   -moz-transition: $type $time $kind $delay;
+		-ms-transition: $type $time $kind $delay;
+		 -o-transition: $type $time $kind $delay;
+			transition: $type $time $kind $delay;
+}
+@mixin transform($data){
+	-webkit-transform: $data;
+	-moz-transform: $data;
+	-ms-transform: $data;
+	-o-transform: $data;
+	transform: $data;
+}
+@mixin border($place, $width, $kind, $color) {
+	 @if $place == 'all' {
+	 border: $width $kind $color;
+	 } 
+	 @else {
+	 border-#{$place}: $width $kind $color;
+	 }
+}
+@mixin black-white($blackout){
+	-webkit-filter: grayscale($blackout);
+	   -moz-filter: grayscale($blackout);
+		-ms-filter: grayscale($blackout);
+		 -o-filter: grayscale($blackout);
+	   		filter: grayscale($blackout);	
+	   		filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1);
+    filter: url('../js/filters.svg#grayscale');
+}
+%center{
+	max-width: 1100px;
+	margin: 0 auto;
+}
+%jeans{
+	background: #8a9cb2 url(../img/Jeans.jpg);
+}
+%shadow-rounding{
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.7) inset, 0 0 0 #000 inset, 0px 3px 3px 0px rgba(255, 255, 255, 0.7);
+}
+%bulged-in{
+	@include border(all, 2px, dashed, #FFBE40);
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center; 
+	color: #6F370F;
+	border-radius: 5px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.5) inset;
+	text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+%patch{
+	box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.6) inset, 1px 2px 8px rgba(252, 255, 255, 0.7) inset, 0 3px 10px 3px rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 50, 0.3);
+
+}
+%double-seam{
+	display: block;
+	content: "";
+	width: 100%;
+	height: 19px;
+	@include border(top, 2px, dashed, #FFBE40);
+	@include border(bottom, 2px, dashed, #FFBE40);
+}
+%bronze{
+	border-radius: 100%;
+	background: url(../img/bronze.jpg);
+	box-shadow: 0 -3px 2px rgba(0, 0, 0, 0.6) inset, 0 3px 2px rgba(252, 255, 255, 0.4) inset, 0 1px 4px 0px rgba(0, 0, 0, 0.8);
+}
+%button{
+	content: "";
+	display: block;
+	width: 25px;
+	height: 25px;
+	@extend %bronze;
+	@include absolute(13px, auto, auto, 13px);
+	z-index: 1;
+}
+body{
+	@extend %jeans;
+	box-shadow: 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+
+	header{
+		position: fixed;
+		z-index: 5;
+		width: 100%;
+		@extend %jeans;
+		padding-bottom: 5px;
+		padding-top: 5px;
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8), 0px -2px 5px -1px #000 inset, 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+		
+		&::after{
+			@include absolute;
+			display: block;
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 50, 0.3);
+			z-index: -1;
+		}
+		&::before{
+			@extend %double-seam;
+			@include absolute(auto, auto, 15px, 0);
+			z-index: 1;
+		}
+
+		.navbar-default{
+			@extend %center;
+			border: none;
+			background-color: transparent;
+			margin-bottom: 30px;
+			position: relative;
+
+			.navbar-brand{
+				border-radius: 5px;
+				background: url(../img/leather.jpg);
+				box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.6) inset, 1px 2px 3px rgba(252, 255, 255, 0.7) inset, 0 0px 8px 0px #000;
+				height: 130px;
+				padding: 10px;
+				@include absolute(12px, auto, auto, 15px);
+				z-index: 12;
+
+
+
+				&:hover, &:focus{
+					background: url(../img/leather.jpg);
+
+					.skitch span{
+						color: #6F370F;
+					}
+				}
+				.stitch{
+					@extend %bulged-in;
+					height: 100%;
+					padding: 20px 30px;
+
+					span{
+						text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+						color: #8B4513;
+						display: block;
+						text-transform: none;
+						margin-bottom: 15px;
+					}
+				}
+			}
+
+			.navbar-nav {
+				>li{
+				    padding: 3px;
+				    @include transition;
+					border-style: solid;
+					border-width: 17px;
+					-webkit-border-image: url(../img/12.png) 16 17 16 16 fill round;
+					   -moz-border-image: url(../img/12.png) 16 17 16 16 fill round;
+						 -o-border-image: url(../img/12.png) 16 17 16 16 fill round;
+							border-image: url(../img/12.png) 16 17 16 16 fill round;
+
+				    &:hover a, &:focus a{
+				    	color: #FFBE40;
+				    }
+
+				    &.active{
+				    	a{
+							box-shadow: 0 0 5px rgba(0,0,0,0.5) inset;
+				    		color: #FFBE40;
+				    		background: none;
+				    		border-color: #fff;
+				    	}
+				    }
+
+				    &.active:hover a, &.active:focus a{
+				    	color: #fff;
+				    	background: none;
+				    }
+
+					>a{	
+				    	border-radius: 10px;
+				    	@include transition(all, 0.3s);
+						@include border(all, 1px, dashed, transparent);
+						color: #fff;
+						text-transform: uppercase;
+						font-weight: bold;
+						font-size: 16px;
+						line-height: 18px;
+						padding: 10px;
+
+						&:focus, &:hover{
+							color: #FFBE40;
+							border-color: transparent;
+							outline: none;
+						}
+					}
+				}	
+			}
+		}
+	}
+
+	main{
+		display: block;
+		@extend %center;
+		padding-top: 150px;
+
+		div[class^="col-"]{
+			text-align: center;
+
+			.circle{
+				@extend %patch;
+				overflow: hidden;
+				display: inline-block;
+				width: 300px;
+				height: 300px;
+				border-radius: 100%;
+				@include transition;
+				position: relative;
+				margin-bottom: 30px;
+				padding: 18px;
+
+				&:before{
+					display: block;
+					content: "";
+					@include absolute(auto, auto, 0, 0);
+					background-color: rgba(0,0,0, 0.7);
+					width: 100%;
+					height: 0px;
+					@include transition;
+					z-index: 1;
+				}
+
+				&:hover{
+					@extend %shadow-rounding;
+				
+					.circle-inside img{
+						@include black-white(0);
+						filter: none; /* Applies to FF + IE */
+    					-webkit-filter: grayscale(0);
+					}
+
+					& .info{
+						height: 130px;
+					}
+
+					svg circle.stroke-yellow{
+								stroke: #fff; 
+					}
+				}
+
+				svg{
+					@include absolute(10px, auto, auto, 10px);
+					circle {
+					  stroke-width: 2;
+					  fill: none;
+					}
+
+					circle.stroke-yellow {
+					  stroke: #FFBE40;  
+					  stroke-dasharray: 7,7;
+					}
+
+					circle.stroke-grey {
+					  stroke: rgba(0,0,0,0.3);  
+					  stroke-width: 6;
+					}
+				}
+				
+				.circle-inside{
+					border-radius: 100%;
+					width: 264px;
+					height: 264px;
+					overflow: hidden;
+					position: relative;
+					z-index: 1;
+
+					img{
+						@include black-white(100%);
+					}    
+				}
+			}
+
+			.info{
+				@include absolute;
+				width: 100%;
+				color: #fff;
+				@include absolute(auto, auto, 0, 0);
+				background-color: rgba(0,0,0, 0.7);
+				width: 100%;
+				height: 0px;
+				@include transition;
+				z-index: 1;
+				padding: 0 15px; 
+				
+
+				h2{
+					margin: 15px 0 5px;
+					text-transform: uppercase;
+					font:{
+						size: 16px;
+						weight: bold;
+					}
+					line-height: 18px;
+					color: #FFBE40;
+				}
+			}
+		}		
+	}
+
+	footer{
+		background-color: rgba(0, 0, 50, 0.3);
+		position: relative;
+		box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.8), 0px 2px 5px -1px #000 inset, 20px 0 20px -20px #000 inset, -20px 0 20px -20px #000 inset;
+
+		&::before{
+			@include absolute(15px, auto, auto, 0);
+			@extend %double-seam;
+
+			z-index: 1;
+		}
+
+		#footer{
+			@extend %center;
+			padding: 50px 0 15px;
+			text-align: center;
+
+			.row {
+    display: flex;
+}
+
+[class*="col-"] {
+    display: flex;
+}
+			
+			.box{
+				@extend %patch;
+				border-radius: 0 0 70px 70px;
+				padding: 15px;
+				width: 500px;
+				position: relative;
+				display: flex;
+				min-height: 250px;
+
+				&:before{
+					@extend %button;
+				}
+
+				&:after{
+					@extend %button;
+					left: auto;
+					right: 13px;
+				}
+
+				.copyright{
+					@include transform(rotate(-90deg));
+					font-size: 10px;
+					line-height: 12px;
+					@include absolute(90px, auto, auto, -79px);
+					color: #fff;
+					background: url(../img/yellowcotton.jpg);
+					padding: 5px 10px;
+					box-shadow: 0px -5px 5px 0px rgba(0,0,0,0.7) inset, 0px 2px 7px rgba(255,255, 255, 0.5) inset;
+					border-radius: 3px;
+
+				}
+
+				h3{
+					@include absolute(0, 50px, auto, auto);
+					background: #673435 url(../img/redjeans.jpg);
+					border-radius: 3px;
+					text-transform: uppercase;
+					padding: 4px;
+					margin: 0;
+					z-index: 1;
+					box-shadow: 0 2px 5px #000, 0 3px 5px rgba(255, 255, 255, 0.5) inset;
+
+					span{
+						display: block;
+						@include border(all, 1px, dashed, #FFBE40);
+						font-size: 16px;
+						line-height: 18px;
+						color: #fff;
+						padding: 10px;
+					}
+				}
+
+				.wrapper-stitch{
+					display: flex;
+					width: 100%;
+					@include border(all, 2px, dashed, #FFBE40);
+					border-radius: 0 0 50px 50px;
+					padding: 0 15px 15px 15px;
+					border-top: none;
+					position: relative;
+
+					&:before{
+						@extend %double-seam;
+						@include absolute(0, auto, auto, 0);
+					}
+
+					.stitch{
+						width: 100%;
+						@include border(all, 2px, dashed, #FFBE40);
+						border-top: none;
+						border-radius: 0 0 40px 40px;
+						padding: 45px 15px 15px 15px;
+						color: #fff;
+						
+						.social{
+							text-align: center;
+							margin-bottom: 15px;
+
+							li {
+								@extend %bronze;
+								width: 50px;
+								height: 50px;
+								padding: 5px;
+								margin: 0 20px;
+
+								a{
+									width: 40px;
+									height: 40px;
+									display: block;
+									font-size: 25px;
+			    					line-height: 40px;
+			    					color: #6F370F;
+			    					text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+
+			    					&:focus, &:hover{
+										text-decoration: none;
+			    					}
+								}
+
+								&:hover, &:active{
+									@extend %shadow-rounding;
+
+									a{
+										text-decoration: none;
+									}
+								}
+							}
+						}
+
+						span{
+							display: block;
+							color: #fff;
+
+							a{
+								color: #fff;
+
+								&:hover, &:focus{
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+				
+				
+				
+
+				
+				
+			}
+		}
+	}
+	
+}
+
+

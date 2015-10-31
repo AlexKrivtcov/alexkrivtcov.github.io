@@ -1,0 +1,808 @@
+@font-face {
+  font-family: "ufonts_com_dinengschriftstdopentype";
+  src: url("../fonts/ufonts_com_dinengschriftstdopentype.eot");
+  src: url("../fonts/ufonts_com_dinengschriftstdopentype.eot") format("embedded-opentype"), url("../fonts/ufonts_com_dinengschriftstdopentype.woff2") format("woff2"), url("../fonts/ufonts_com_dinengschriftstdopentype.woff") format("woff"), url("../fonts/ufonts_com_dinengschriftstdopentype.ttf") format("truetype"), url("../fonts/ufonts_com_dinengschriftstdopentype.svg#ufonts_com_dinengschriftstdopentype") format("svg");
+}
+
+@font-face {
+  font-family: "ufonts_com_dinmittelschriftstd1opentype";
+  src: url("../fonts/ufonts_com_dinmittelschriftstd1opentype.eot");
+  src: url("../fonts/ufonts_com_dinmittelschriftstd1opentype.eot") format("embedded-opentype"), url("../fonts/ufonts_com_dinmittelschriftstd1opentype.woff2") format("woff2"), url("../fonts/ufonts_com_dinmittelschriftstd1opentype.woff") format("woff"), url("../fonts/ufonts_com_dinmittelschriftstd1opentype.ttf") format("truetype"), url("../fonts/ufonts_com_dinmittelschriftstd1opentype.svg#ufonts_com_dinmittelschriftstd1opentype") format("svg");
+}
+
+@font-face {
+  font-family: "ufonts_com_klavikamedcapsscopentype";
+  src: url("../fonts/ufonts_com_klavikamedcapsscopentype.eot");
+  src: url("../fonts/ufonts_com_klavikamedcapsscopentype.eot") format("embedded-opentype"), url("../fonts/ufonts_com_klavikamedcapsscopentype.woff2") format("woff2"), url("../fonts/ufonts_com_klavikamedcapsscopentype.woff") format("woff"), url("../fonts/ufonts_com_klavikamedcapsscopentype.ttf") format("truetype"), url("../fonts/ufonts_com_klavikamedcapsscopentype.svg#ufonts_com_klavikamedcapsscopentype") format("svg");
+}
+
+@font-face {
+  font-family: "Lobster_1_0";
+  src: url("../fonts/Lobster_1_0.eot");
+  src: url("../fonts/Lobster_1_0.eot") format("embedded-opentype"), url("../fonts/Lobster_1_0.woff2") format("woff2"), url("../fonts/Lobster_1_0.woff") format("woff"), url("../fonts/Lobster_1_0.ttf") format("truetype"), url("../fonts/Lobster_1_0.svg#Lobster_1_0") format("svg");
+}
+
+@font-face {
+  font-family: "ufonts_com_klavikabolditalicopentype";
+  src: url("../fonts/ufonts_com_klavikabolditalicopentype.eot");
+  src: url("../fonts/ufonts_com_klavikabolditalicopentype.eot") format("embedded-opentype"), url("../fonts/ufonts_com_klavikabolditalicopentype.woff2") format("woff2"), url("../fonts/ufonts_com_klavikabolditalicopentype.woff") format("woff"), url("../fonts/ufonts_com_klavikabolditalicopentype.ttf") format("truetype"), url("../fonts/ufonts_com_klavikabolditalicopentype.svg#ufonts_com_klavikabolditalicopentype") format("svg");
+}
+
+@font-face {
+  font-family: "MyriadProBoldCond";
+  src: url("../fonts/MyriadProBoldCond.eot");
+  src: url("../fonts/MyriadProBoldCond.eot") format("embedded-opentype"), url("../fonts/MyriadProBoldCond.woff2") format("woff2"), url("../fonts/MyriadProBoldCond.woff") format("woff"), url("../fonts/MyriadProBoldCond.ttf") format("truetype"), url("../fonts/MyriadProBoldCond.svg#MyriadProBoldCond") format("svg");
+}
+
+@font-face {
+  font-family: "36035";
+  src: url("../fonts/36035.eot");
+  src: url("../fonts/36035.eot") format("embedded-opentype"), url("../fonts/36035.woff2") format("woff2"), url("../fonts/36035.woff") format("woff"), url("../fonts/36035.ttf") format("truetype"), url("../fonts/36035.svg#36035") format("svg");
+}
+
+header nav.navbar-default ul.nav li a span {
+  display: block;
+  font-family: "ufonts_com_dinmittelschriftstd1opentype";
+  position: absolute;
+  top: auto;
+  left: 73px;
+  bottom: 5px;
+  right: auto;
+}
+
+header nav.navbar-default ul.nav li a:after, .square-cursor:before, .square-cursor:after, main .banner:before, main .banner:after, main .banner .call:before, main .banner .call.banner:after, main .about-works .unit .box strong:before, main .about-works .unit .box strong.banner:after, main .our-news .unit .latest-news > ul > li a > ul:before, main .our-news .unit .latest-news > ul > li a > ul.banner:after, main .our-news .unit strong:before, main .our-news .unit strong.banner:after, main .our-news .unit .testimonials ul li strong:before, main .our-news .unit .testimonials ul li strong.banner:after, main .our-news .unit .latest-news > ul > li a > ul li:before, main .our-news .unit .latest-news > ul > li a > ul li.banner:after, footer .nav-pills li:before, footer .nav-pills main li.banner:after, main footer .nav-pills li.banner:after {
+  display: block;
+  content: "";
+}
+
+a {
+  color: #8d9799;
+}
+
+a:hover, a:focus {
+  color: #677173;
+}
+
+body {
+  font-family: arial, helvetica, sans-serif;
+  min-width: 568px;
+  background: -webkit-linear-gradient(0deg, #434e54, #434e54) repeat-x 0 0/100% 13px, url(../img/pattern.png) 0 0, #fff;
+  background: -webkit-linear-gradient(90deg, #434e54, #434e54) repeat-x 0 0/100% 13px, url(../img/pattern.png) 0 0, #fff;
+  background: linear-gradient(0deg, #434e54, #434e54) repeat-x 0 0/100% 13px, url(../img/pattern.png) 0 0, #fff;
+}
+
+header {
+  margin-top: 14px;
+  border-top: 1px dotted #000;
+}
+
+header nav.navbar-default {
+  background-color: transparent;
+  border: none;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 5px 9px 8px 5px;
+}
+
+@media screen and (max-width: 840px) {
+  header nav.navbar-default {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+header nav.navbar-default .navbar-toggle {
+  margin-right: 35px;
+  margin-top: 40px;
+  border-color: #8d9799;
+}
+
+header nav.navbar-default .navbar-toggle .icon-bar {
+  height: 3px;
+  width: 35px;
+}
+
+header nav.navbar-default .navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 7px;
+}
+
+header nav.navbar-default .navbar-brand {
+  background: url(../img/tools.png) no-repeat 0 37px;
+  height: auto;
+  text-transform: uppercase;
+}
+
+header nav.navbar-default .navbar-brand .logo-text {
+  font-family: "ufonts_com_dinengschriftstdopentype";
+  font-size: 48px;
+  line-height: 38px;
+  letter-spacing: -0.025em;
+  padding-left: 58px;
+  padding-top: 23px;
+  color: #088f95;
+  display: block;
+}
+
+header nav.navbar-default .navbar-brand .logo-text span {
+  color: #fdaa04;
+}
+
+header nav.navbar-default .navbar-brand .logo-slogan {
+  letter-spacing: -0.01em;
+  padding-left: 58px;
+  display: block;
+  font-family: "ufonts_com_dinmittelschriftstd1opentype";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+header nav.navbar-default ul.nav {
+  margin-bottom: 3px;
+}
+
+header nav.navbar-default ul.nav li {
+  border-left: 1px solid #d6d7d8;
+  text-transform: uppercase;
+}
+
+header nav.navbar-default ul.nav li a {
+  font-family: "ufonts_com_klavikamedcapsscopentype";
+  color: #32383a;
+  letter-spacing: -0.045em;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 38px 24px 35px 3px;
+  position: relative;
+}
+
+header nav.navbar-default ul.nav li a span {
+  font-size: 10px;
+  line-height: 12px;
+  bottom: 28px;
+  left: 5px;
+  letter-spacing: normal;
+}
+
+header nav.navbar-default ul.nav li a:after {
+  position: absolute;
+  top: auto;
+  left: 6px;
+  bottom: 20px;
+  right: auto;
+  width: 5px;
+  height: 5px;
+  background-color: #e8d457;
+}
+
+header nav.navbar-default ul.nav li a:hover::after {
+  width: 85%;
+  -webkit-transition: all, 0.5s, linear, 0s;
+  transition: all, 0.5s, linear, 0s;
+}
+
+@media screen and (max-width: 768px) {
+  header nav.navbar-default ul.nav li {
+    border-bottom: 1px solid #d6d7d8;
+    border-left: none;
+  }
+  header nav.navbar-default ul.nav li a {
+    padding: 10px 24px 20px 3px;
+  }
+  header nav.navbar-default ul.nav li a span {
+    bottom: 12px;
+  }
+  header nav.navbar-default ul.nav li a::after {
+    bottom: 6px;
+  }
+}
+
+.square-cursor:before, main .square-cursor.banner:after, .square-cursor:after {
+  width: 7px;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: auto;
+  right: auto;
+}
+
+.square-cursor {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: auto;
+  right: auto;
+  width: 18px;
+  height: 18px;
+  display: block;
+  background: #dc8d0d;
+  -webkit-background: -webkit-linear-gradient(90deg, #dc8d0d, #ffad2a) no-repeat 0 0;
+  -moz-background: linear-gradient(0deg, #dc8d0d, #ffad2a) no-repeat 0 0;
+  -ms-background: linear-gradient(0deg, #dc8d0d, #ffad2a) no-repeat 0 0;
+  -o-background: linear-gradient(0deg, #dc8d0d, #ffad2a) no-repeat 0 0;
+  background: linear-gradient(0deg, #dc8d0d, #ffad2a) no-repeat 0 0;
+  border-radius: 4px;
+}
+
+.square-cursor:before, main .square-cursor.banner:after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.square-cursor:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 9px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+main {
+  display: block;
+  max-width: 950px;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+  background: #8b8c8d;
+  -webkit-background: -webkit-linear-gradient(90deg, #8b8c8d, #8b8c8d) no-repeat 0 0;
+  -moz-background: linear-gradient(0deg, #8b8c8d, #8b8c8d) no-repeat 0 0;
+  -ms-background: linear-gradient(0deg, #8b8c8d, #8b8c8d) no-repeat 0 0;
+  -o-background: linear-gradient(0deg, #8b8c8d, #8b8c8d) no-repeat 0 0;
+  background: linear-gradient(0deg, #8b8c8d, #8b8c8d) no-repeat 0 0;
+  background-position: 0 100%;
+  background-size: 100% 10px;
+}
+
+@media screen and (max-width: 840px) {
+  main {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+main .banner {
+  color: #fff;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+main .banner img {
+  width: 100%;
+  height: auto;
+}
+
+main .banner:before, main .banner:after {
+  position: absolute;
+  top: auto;
+  left: 40px;
+  bottom: 20px;
+  right: auto;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  height: 5px;
+  width: 60%;
+  box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+main .banner:after {
+  left: auto;
+  right: 40px;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+main .banner .slogan {
+  font-family: "Lobster_1_0";
+  font-size: 48px;
+  line-height: 50px;
+  font-size: 4vw;
+  line-height: 4.2vw;
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 104px;
+  left: 45px;
+  bottom: auto;
+  right: auto;
+}
+
+main .banner .slogan > span {
+  display: block;
+  font-size: 78px;
+  line-height: 80px;
+  font-size: 6.5vw;
+  line-height: 4vw;
+  margin-left: 75px;
+  letter-spacing: -0.02em;
+}
+
+main .banner .slogan a {
+  font-family: "ufonts_com_dinengschriftstdopentype";
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+  position: relative;
+  margin-left: 71px;
+  padding-left: 30px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+main .banner .slogan a:hover {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+main .banner .call {
+  letter-spacing: -0.025em;
+  position: absolute;
+  top: auto;
+  left: 45px;
+  bottom: 20px;
+  right: auto;
+  font-family: "ufonts_com_dinengschriftstdopentype";
+  font-size: 38px;
+  line-height: 38px;
+  font-size: 3.2vw;
+  line-height: 3.2vw;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
+main .banner .call:before, main .banner .call.banner:after {
+  position: absolute;
+  top: 5px;
+  left: -45px;
+  bottom: auto;
+  right: auto;
+  background: url(../img/phone.png) no-repeat 0 0;
+  width: 44px;
+  height: 62px;
+}
+
+main .banner .call span {
+  margin-top: -6px;
+  display: block;
+  color: #e8d457;
+  font-family: "ufonts_com_klavikabolditalicopentype";
+}
+
+main .banner .call span b {
+  color: #fdaa04;
+}
+
+main .about-works {
+  margin-right: -20px;
+  margin-left: -20px;
+  margin-bottom: 28px;
+}
+
+main .about-works h3 {
+  font-family: "ufonts_com_klavikamedcapsscopentype";
+  font-size: 16px;
+  line-height: 18px;
+  padding: 12px 8px 10px;
+  margin-bottom: 0;
+  letter-spacing: -0.05em;
+}
+
+main .about-works .unit {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+main .about-works .unit:hover img {
+  opacity: 0.8;
+}
+
+main .about-works .unit img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 21px;
+  -webkit-transition: all, 0.5s, linear, 0s;
+  transition: all, 0.5s, linear, 0s;
+}
+
+main .about-works .unit .box {
+  margin: 0 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+main .about-works .unit .box strong {
+  display: block;
+  position: relative;
+  font-weight: bold;
+  padding: 0 0 6px 50px;
+  margin-bottom: 4px;
+  min-height: 40px;
+  border-bottom: 1px dotted #8d9799;
+}
+
+main .about-works .unit .box strong:before, main .about-works .unit .box strong.banner:after {
+  width: 29px;
+  height: 32px;
+  background: url(../img/sprite.png) no-repeat 0 0;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  bottom: auto;
+  right: auto;
+}
+
+main .about-works .unit .box p {
+  color: #8d9799;
+  margin-bottom: 19px;
+  letter-spacing: 0.02em;
+}
+
+main .about-works .unit .box p a {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+main .about-works .unit .box p a:hover {
+  text-decoration: none;
+}
+
+main .about-works .unit .box .btn-default {
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 -2px 2px 0px rgba(0, 0, 0, 0.6) inset;
+  background: #a9a9b1;
+  -webkit-background: -webkit-linear-gradient(90deg, #a9a9b1, #565a5d) no-repeat 0 0;
+  -moz-background: linear-gradient(0deg, #a9a9b1, #565a5d) no-repeat 0 0;
+  -ms-background: linear-gradient(0deg, #a9a9b1, #565a5d) no-repeat 0 0;
+  -o-background: linear-gradient(0deg, #a9a9b1, #565a5d) no-repeat 0 0;
+  background: linear-gradient(0deg, #a9a9b1, #565a5d) no-repeat 0 0;
+  color: #fff;
+  padding: 2px 25px;
+  font-family: "MyriadProBoldCond";
+  -webkit-transition: all, 0.2s, linear, 0s;
+  transition: all, 0.2s, linear, 0s;
+}
+
+main .about-works .unit .box .btn-default:hover {
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5) inset;
+}
+
+main .about-works .unit.orange-title h3 {
+  background: #fdaa04;
+}
+
+main .about-works .unit.orange-title strong:before, main .about-works .unit.orange-title strong.banner:after {
+  background-position: 0 0;
+  width: 31px;
+}
+
+main .about-works .unit.yellow-title h3 {
+  background: #e8d457;
+}
+
+main .about-works .unit.yellow-title strong:before, main .about-works .unit.yellow-title strong.banner:after {
+  background-position: -31px 0;
+  width: 30px;
+}
+
+main .about-works .unit.aquamarin-title h3 {
+  background: #72ad75;
+}
+
+main .about-works .unit.aquamarin-title strong:before, main .about-works .unit.aquamarin-title strong.banner:after {
+  background-position: -61px 0;
+}
+
+main .about-works .unit.blue-title h3 {
+  background: #088f95;
+}
+
+main .about-works .unit.blue-title strong:before, main .about-works .unit.blue-title strong.banner:after {
+  background-position: -90px 0;
+}
+
+main .our-news {
+  background-color: #fff;
+  box-shadow: 0 25px 50px -45px rgba(0, 0, 0, 0.3) inset, 0 -16px 40px -30px rgba(0, 0, 0, 0.3);
+  border-top: 10px solid #fff;
+}
+
+main .our-news .row {
+  margin-right: -6px;
+  margin-left: -6px;
+}
+
+main .our-news .row div.col-md-4 {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+main .our-news .unit {
+  font-size: 12px;
+  line-height: 18px;
+  /*padding-right: $our-news-padding;
+		    padding-left: $our-news-padding;*/
+}
+
+main .our-news .unit > div {
+  padding: 0 10px 0 3px;
+}
+
+main .our-news .unit p {
+  color: #8d9799;
+  letter-spacing: 0.015em;
+}
+
+main .our-news .unit h2 {
+  font-family: "ufonts_com_klavikamedcapsscopentype";
+  font-size: 35px;
+  line-height: 37px;
+  letter-spacing: -0.085em;
+  padding-right: 55px;
+  padding-bottom: 7px;
+  margin-bottom: 17px;
+  border-bottom: 1px dotted #8d9799;
+  position: relative;
+}
+
+main .our-news .unit h2 .square-cursor {
+  left: auto;
+  right: 16px;
+  bottom: auto;
+  top: 23px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+main .our-news .unit h2 span:first-of-type {
+  display: block;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: -0.03em;
+  margin: -3px 0 0 3px;
+  color: #8d9799;
+  text-transform: uppercase;
+}
+
+main .our-news .unit .latest-news > ul > li a > ul:before, main .our-news .unit .latest-news > ul > li a > ul.banner:after, main .our-news .unit strong:before, main .our-news .unit strong.banner:after, main .our-news .unit .testimonials ul li strong:before, main .our-news .unit .testimonials ul li strong.banner:after {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: auto;
+  right: auto;
+  width: 29px;
+  height: 30px;
+  background: url(../img/sprite.png) 0 0;
+}
+
+main .our-news .unit .latest-news > ul {
+  margin: 0 4px;
+}
+
+main .our-news .unit .latest-news > ul > li {
+  margin-bottom: 14px;
+}
+
+main .our-news .unit .latest-news > ul > li a p {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+main .our-news .unit .latest-news > ul > li a:hover p, main .our-news .unit .latest-news > ul > li a:hover {
+  text-decoration: none;
+  color: #677173;
+}
+
+main .our-news .unit .latest-news > ul > li a > ul {
+  text-decoration: none;
+  padding: 8px 0 0 40px;
+  margin-bottom: 14px;
+  position: relative;
+  font-family: "36035";
+}
+
+main .our-news .unit .latest-news > ul > li a > ul:before, main .our-news .unit .latest-news > ul > li a > ul.banner:after {
+  background-position: 0 -32px;
+}
+
+main .our-news .unit .latest-news > ul > li a > ul li {
+  position: relative;
+}
+
+main .our-news .unit .latest-news > ul > li a > ul li:before, main .our-news .unit .latest-news > ul > li a > ul li.banner:after {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  bottom: auto;
+  right: auto;
+  width: 5px;
+  height: 10px;
+  color: #000;
+  content: "/";
+  font-style: italic;
+  color: #000;
+}
+
+main .our-news .unit .latest-news > ul > li a > ul li:first-child {
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: italic;
+  margin-left: 0;
+}
+
+main .our-news .unit .latest-news > ul > li a > ul li:first-child:before, main .our-news .unit .latest-news > ul > li a > ul li.banner:first-child:after {
+  display: none;
+}
+
+main .our-news .unit .name {
+  color: #72ad75;
+  letter-spacing: -0.01em;
+  font-family: "36035";
+}
+
+main .our-news .unit strong {
+  margin: 0 0 15px;
+  display: block;
+  position: relative;
+  font-family: "36035";
+  font-weight: normal;
+}
+
+main .our-news .unit strong:before, main .our-news .unit strong.banner:after {
+  background-position: -29px -32px;
+}
+
+main .our-news .unit .chose-us strong {
+  border-bottom: 1px dotted #8d9799;
+  letter-spacing: -0.015em;
+  padding: 8px 0 10px 47px;
+}
+
+main .our-news .unit .chose-us > ul {
+  list-style-image: url(../img/arrow.png);
+  margin-left: 22px;
+}
+
+main .our-news .unit .chose-us > ul li {
+  padding-left: 4px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+main .our-news .unit .chose-us > ul li a {
+  text-decoration: underline;
+}
+
+main .our-news .unit .chose-us > ul li a:hover {
+  text-decoration: none;
+}
+
+main .our-news .unit .testimonials ul li {
+  margin-bottom: 9px;
+  border-bottom: 1px dotted #8d9799;
+  padding-bottom: 10px;
+}
+
+main .our-news .unit .testimonials ul li:last-child {
+  border: none;
+}
+
+main .our-news .unit .testimonials ul li strong {
+  font-style: italic;
+  color: #000;
+  margin-bottom: 11px;
+  padding: 8px 0 4px 42px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+main .our-news .unit .testimonials ul li strong:before, main .our-news .unit .testimonials ul li strong.banner:after {
+  background-position: -58px -32px;
+}
+
+main .our-news .unit .testimonials ul li span {
+  display: block;
+}
+
+main .our-news .unit .testimonials ul li span b {
+  font-weight: normal;
+  font-family: arial, helvetica, sans-serif;
+}
+
+main .our-news .unit .testimonials ul li p {
+  margin-bottom: 10px;
+}
+
+main .our-news .unit .testimonials ul li p a {
+  text-decoration: underline;
+}
+
+main .our-news .unit .testimonials ul li p a:hover {
+  text-decoration: none;
+}
+
+footer {
+  padding-top: 30px;
+}
+
+footer .nav-pills {
+  margin-bottom: 0;
+}
+
+footer .nav-pills li {
+  float: none;
+  display: inline-block;
+  position: relative;
+}
+
+footer .nav-pills li:first-child::before {
+  display: none;
+}
+
+footer .nav-pills li:before, footer .nav-pills main li.banner:after, main footer .nav-pills li.banner:after {
+  position: absolute;
+  top: 2px;
+  left: -8px;
+  bottom: auto;
+  right: auto;
+  width: 5px;
+  height: 10px;
+  color: #000;
+  content: "//";
+  z-index: 1;
+  color: #8d9799;
+}
+
+footer .nav-pills li a {
+  padding: 0 9px;
+}
+
+footer .nav-pills li a:hover {
+  background-color: transparent;
+}
+
+footer span {
+  font-size: 12px;
+  line-height: 14px;
+  color: #8d9799;
+}
+
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .navbar-header {
+    text-align: center;
+    float: none;
+  }
+  .navbar-header .navbar-brand {
+    display: inline-block;
+    float: none;
+  }
+  .navbar .nav {
+    display: table;
+    margin: 0;
+    width: 100%;
+  }
+  .navbar .nav li {
+    display: table-cell;
+    width: auto;
+    float: none;
+  }
+  main .banner {
+    padding-top: 58px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  main .banner .slogan {
+    top: 70px;
+    left: 20px;
+  }
+  main .banner .call {
+    bottom: 50px;
+  }
+}

@@ -1,0 +1,782 @@
+@mixin fo-face($family){
+	@font-face {
+    font-family: '#{$family}';
+    src: url('../fonts/#{$family}.eot');
+    src: url('../fonts/#{$family}.eot') format('embedded-opentype'),
+         url('../fonts/#{$family}.woff2') format('woff2'),
+         url('../fonts/#{$family}.woff') format('woff'),
+         url('../fonts/#{$family}.ttf') format('truetype'),
+         url('../fonts/#{$family}.svg##{$family}') format('svg');}
+}
+@mixin gradient($first_color, $second_color, $first_color2, $second_color2){
+		@if $first_color2==null and $second_color2==null{
+				background: $first_color;
+		-webkit-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		   -moz-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		  	-ms-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		  	 -o-background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		  		background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0;
+		}	
+		@else {
+			background: $first_color;
+	background: -webkit-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+				-webkit-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+	   background: -moz-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+	   			   -moz-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+		background: -ms-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+					-ms-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+		 background: -o-linear-gradient(90deg, $first_color, $second_color) no-repeat 0 0,
+		 			 -o-linear-gradient(90deg, $first_color2, $second_color2) no-repeat 0 0;
+			background: linear-gradient(0deg, $first_color, $second_color) no-repeat 0 0,
+						linear-gradient(0deg, $first_color2, $second_color2) no-repeat 0 0;
+		}
+}
+@mixin border($place, $width, $kind, $color) {
+	 @if $place == 'all' {
+	 border: $width $kind $color;
+	 } 
+	 @else {
+	 border-#{$place}: $width $kind $color;
+	 }
+}
+@mixin font($size, $height){
+  font-size: $size;
+  line-height: $height;
+}
+@mixin center{
+	max-width: 950px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 840px){
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+@mixin absolute($top, $right, $bottom, $left){
+	position: absolute;
+	top: #{$top};
+	left: #{$left};
+	bottom: #{$bottom};
+	right: #{$right};
+}
+@mixin transition($type: all, $time: 0.5s, $kind: linear, $delay: 0s){
+	-webkit-transition: $type, $time, $kind, $delay;
+	   -moz-transition: $type, $time, $kind, $delay;
+		-ms-transition: $type, $time, $kind, $delay;
+		 -o-transition: $type, $time, $kind, $delay;
+			transition: $type, $time, $kind, $delay;
+}
+@mixin transform($data){
+	-webkit-transform: $data;
+	-moz-transform: $data;
+	-ms-transform: $data;
+	-o-transform: $data;
+	transform: $data;
+}
+@include fo-face(ufonts_com_dinengschriftstdopentype);
+@include fo-face(ufonts_com_dinmittelschriftstd1opentype);
+@include fo-face(ufonts_com_klavikamedcapsscopentype);
+@include fo-face(Lobster_1_0);
+@include fo-face(ufonts_com_klavikabolditalicopentype);
+@include fo-face(MyriadProBoldCond);
+@include fo-face(36035);
+$blue: #088f95;
+$orange: #fdaa04;
+$grey: #8d9799;
+$white: #fff;
+%info{
+	display: block;
+	font-family: "ufonts_com_dinmittelschriftstd1opentype";
+	@include absolute(auto, auto, 5px, 73px);
+}
+%virtual{
+	display: block;
+	content: "";
+}
+a{
+	color: $grey;
+
+	&:hover, &:focus{
+		color: darken( $grey, 15% );
+	}
+}
+body{
+	font-family: arial, helvetica, sans-serif;
+	min-width: 568px;
+	background:  -webkit-linear-gradient(0deg, #434e54, #434e54) repeat-x 0 0 / 100% 13px, url(../img/pattern.png) 0 0, #fff;
+	   background:  -moz-linear-gradient(0deg, #434e54, #434e54) repeat-x 0 0 / 100% 13px, url(../img/pattern.png) 0 0, #fff;
+		background:  -ms-linear-gradient(0deg, #434e54, #434e54) repeat-x 0 0 / 100% 13px, url(../img/pattern.png) 0 0, #fff;
+		 background:  -o-linear-gradient(0deg, #434e54, #434e54) repeat-x 0 0 / 100% 13px, url(../img/pattern.png) 0 0, #fff;
+			background:  linear-gradient(0deg, #434e54, #434e54) repeat-x 0 0 / 100% 13px, url(../img/pattern.png) 0 0, #fff;
+}
+header{
+	margin-top: 14px;
+	@include border(top, 1px, dotted, #000);
+
+	nav{
+		&.navbar-default{
+			background-color: transparent;
+			border: none;
+			@include center;
+			padding: 5px 9px 8px 5px;
+
+				.navbar-toggle {
+				    margin-right: 35px;
+				    margin-top: 40px;
+				    border-color: $grey;
+
+				    .icon-bar {
+				    height: 3px;
+				    width: 35px;
+
+					    + .icon-bar {
+	    					margin-top: 7px;
+	    				}
+					}
+				}
+
+				.navbar-brand{
+					background: url(../img/tools.png) no-repeat 0 37px;
+					height: auto;
+					text-transform: uppercase;
+
+					.logo-text{
+						font-family: "ufonts_com_dinengschriftstdopentype";
+						@include font(48px, 38px);
+						letter-spacing: -0.025em;
+						padding-left: 58px;
+						padding-top: 23px;
+						color: $blue;
+						display: block;	
+
+						span{
+							color: $orange;
+						}	
+					}
+				
+					.logo-slogan{
+						letter-spacing: -0.01em;
+						padding-left: 58px;
+						display: block;
+						font-family: "ufonts_com_dinmittelschriftstd1opentype";
+						@include font(16px, 18px);
+					}
+				}
+
+				ul.nav{
+					margin-bottom: 3px;
+					li {
+						@include border(left, 1px, solid, #d6d7d8);
+						text-transform: uppercase;
+
+						a{
+						font-family: "ufonts_com_klavikamedcapsscopentype";
+						color: #32383a;
+						letter-spacing: -0.045em;
+						@include font(16px, 18px);
+						padding: 38px 24px 35px 3px;
+						position: relative;
+
+							span{
+								@extend %info;
+								@include font(10px, 12px);
+								bottom: 28px;
+								left: 5px;
+								letter-spacing: normal;
+
+							}
+
+							&:after{
+								@extend %virtual;
+								@include absolute(auto, auto, 20px, 6px);
+								width: 5px;
+								height: 5px;
+								background-color: #e8d457;
+							}
+
+							&:hover::after{
+								width: 85%;
+								@include transition;
+							}
+						}
+						@media screen and (max-width: 768px){
+							@include border(bottom, 1px, solid, #d6d7d8);
+							border-left: none;
+
+							a{
+								padding: 10px 24px 20px 3px;
+
+								span{
+									bottom: 12px;
+								}
+
+								&:hover::after{
+								
+								}
+
+								&::after{
+									bottom: 6px;
+								}
+							}
+							
+
+						}
+					}
+				}
+		}
+	}
+}
+%square{
+	@extend %virtual;
+	width: 7px;
+	height: 4px;
+	background-color: $white;	
+	@include absolute(5px, auto, auto, 5px);
+}
+.square-cursor{
+	@include absolute(0px, auto, auto, 0px);
+	width: 18px;
+	height: 18px;
+	display: block;
+	@include gradient(#dc8d0d, #ffad2a, null, null);
+	border-radius: 4px;
+
+	&:before{
+		@extend %square;
+		@include transform(rotate(45deg));
+	}
+	&:after{
+		@extend %square;
+		@include transform(rotate(-45deg));
+		top: 9px;
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+
+	}
+}
+main{
+	display: block;
+	@include center;
+	@include border(bottom, 1px, solid, #000);
+	padding-bottom: 15px;
+	@include gradient(#8b8c8d, #8b8c8d, null, null);
+	background-position: 0 100%;
+	background-size: 100% 10px;
+
+	.banner{
+			color: $white;
+			margin-bottom: 30px;
+			position: relative;
+
+			img{
+				width: 100%;
+				height: auto;
+			}
+
+			&:before{
+				@extend %virtual;
+				@include absolute(auto, auto, 20px, 40px);
+				@include transform(rotate(-2deg));
+				height: 5px;
+				width: 60%;
+				box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.6);
+				z-index: -1;
+			}
+			&:after{
+				@extend &:before;
+				left: auto;
+				right: 40px;
+				@include transform(rotate(2deg));
+
+			}
+
+			.slogan{
+				font-family: "Lobster_1_0";
+				@include font(48px, 50px);
+				@include font(4vw, 4.2vw);
+				letter-spacing: -0.02em;
+				@include absolute(104px, auto, auto, 45px);
+
+				>span{
+					display: block;
+					@include font(78px, 80px);
+					@include font(6.5vw, 4vw);
+					margin-left: 75px;
+					letter-spacing: -0.02em;
+
+				}
+			
+				a{
+					font-family: "ufonts_com_dinengschriftstdopentype";
+					@include font(18px, 20px);
+					color: $white;
+					position: relative;
+					margin-left: 71px;
+				    padding-left: 30px;
+				    letter-spacing: -0.02em;
+				    text-transform: uppercase;
+
+					&:hover{
+						text-decoration: none;
+						color: darken($white, 25%);
+					}
+				}
+				}
+				.call{
+				    letter-spacing: -0.025em;
+					@include absolute(auto, auto, 20px, 45px);
+					font-family: "ufonts_com_dinengschriftstdopentype";
+					@include font(38px, 38px);
+					@include font(3.2vw, 3.2vw);
+					text-transform: uppercase;
+					padding-left: 15px;
+
+						&:before{
+							@extend %virtual;
+							@include absolute(5px, auto, auto, -45px);
+							background: url(../img/phone.png) no-repeat 0 0;
+							width: 44px;
+							height: 62px;
+						}
+
+						span{
+							margin-top: -6px;
+							display: block;
+							color: #e8d457;
+							font-family: "ufonts_com_klavikabolditalicopentype";
+
+							b{
+								color: $orange;
+							}
+						}
+					}
+	}
+	$padding: 5px;
+	$bootstrap-padding: -15px;
+
+	.about-works{
+		margin-right: $bootstrap-padding - $padding;
+		margin-left: $bootstrap-padding - $padding;
+		margin-bottom: 28px;
+
+		h3{
+		font-family: "ufonts_com_klavikamedcapsscopentype";
+		@include font(16px, 18px);
+		padding: 12px 8px 10px;
+		margin-bottom: 0;
+		letter-spacing: -0.05em;
+
+		}
+		.unit{
+			padding-right: $padding;
+		    padding-left: $padding;
+
+		    &:hover img{
+		    	opacity: 0.8;
+		    }
+			img{
+				width: 100%;
+				height: auto;
+				margin-bottom: 21px;
+				@include transition;
+			}
+			.box{
+				margin: 0 10px;
+				@include font(12px, 18px);
+
+				strong{
+					display: block;
+					position: relative;
+					font-weight: bold;
+					padding: 0 0 6px 50px;
+					margin-bottom: 4px;
+					min-height: 40px;
+					@include border(bottom, 1px, dotted, $grey);
+
+					&:before{
+						@extend %virtual;
+						width: 29px;
+						height: 32px;
+						background: url(../img/sprite.png) no-repeat 0 0;
+						@include absolute(0px, auto, auto, 5px);
+					}
+				}
+				p{
+					color: $grey;
+					margin-bottom: 19px;
+					letter-spacing: 0.02em;
+
+					a{
+						font-style: italic;
+						text-decoration: underline;
+
+						&:hover{
+							text-decoration: none;
+						}
+					}
+				}
+				.btn-default{
+					text-transform: uppercase;
+					border: none;
+					@include border(bottom, 1px, solid, #000);
+					box-shadow: 0 -2px 2px 0px rgba(0, 0, 0, 0.6) inset;
+					@include gradient(#a9a9b1, #565a5d, null, null);
+					color: $white;
+					padding: 2px 25px;
+					font-family: "MyriadProBoldCond";
+					@include transition(all, 0.2s);
+
+					&:hover{
+						box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5) inset;
+					}
+				}
+			}
+			&.orange-title{
+				h3{
+					background: #fdaa04;
+				}
+				strong:before{
+					background-position: 0 0;
+					width: 31px;
+				}
+			}
+			&.yellow-title{
+				h3{
+					background: #e8d457;
+				}
+				strong:before{
+					background-position: -31px 0;
+					width: 30px;
+				}
+			}
+			&.aquamarin-title{
+				h3{
+					background: #72ad75;
+				}
+				strong:before{
+					background-position: -61px 0;
+				}
+			}
+			&.blue-title{
+				h3{
+					background: #088f95;
+				}
+				strong:before{
+					background-position: -90px 0;
+				}
+			}
+		}
+	}
+
+	$our-news-padding: 6px;
+	.our-news{
+		background-color: $white;
+		box-shadow: 0 25px 50px -45px rgba(0, 0, 0, 0.3) inset, 0 -16px 40px -30px rgba(0, 0, 0, 0.3);
+    	border-top: 10px solid $white;
+
+    	.row{
+    		margin-right: - $our-news-padding;
+			margin-left: - $our-news-padding;
+
+			div.col-md-4{
+				padding-right: $our-news-padding;
+		   		padding-left: $our-news-padding;
+			}
+    	}
+		.unit{
+			@include font(12px, 18px);
+			/*padding-right: $our-news-padding;
+		    padding-left: $our-news-padding;*/
+
+		    > div{
+		    	padding: 0 10px 0 3px;
+		    }
+			p{
+				color: $grey;
+				letter-spacing: 0.015em;
+			}
+
+			h2{
+				font-family: "ufonts_com_klavikamedcapsscopentype";
+				@include font(35px, 37px);
+				letter-spacing: -0.085em;
+				padding-right: 55px;
+				padding-bottom: 7px;
+				margin-bottom: 17px;
+				@include border(bottom, 1px, dotted, $grey);
+				position: relative;
+
+				.square-cursor{
+					left: auto;
+					right: 16px;
+					bottom: auto;
+					top: 23px;
+					@include transform(rotate(90deg));
+				}
+
+				span:first-of-type{
+					display: block;
+					@include font(10px, 14px);
+					letter-spacing: -0.03em;
+					margin: -3px 0 0 3px;
+					color: $grey;
+					text-transform: uppercase;
+				}
+
+			}
+
+			%sprite{
+				@extend %virtual;
+				@include absolute(3px, auto, auto, 4px);
+				width: 29px;
+				height: 30px;
+				background: url(../img/sprite.png) 0 0;
+			}
+
+			.latest-news{
+
+				>ul {
+				margin: 0 4px;
+
+					>li {
+						margin-bottom: 14px;
+
+						a{
+							p{
+								text-decoration: underline;	
+								font-style: italic;
+							}
+							
+
+							&:hover p, &:hover{
+								text-decoration: none;
+								color: darken( $grey, 15% );
+							}
+
+							>ul{
+								text-decoration: none;
+								padding: 8px 0 0 40px;
+								margin-bottom: 14px;
+								position: relative;
+								font-family: "36035";
+
+
+								&:before{
+									@extend %sprite;
+									background-position: 0 -32px;
+								}
+								li{
+									position: relative;
+
+									&:before{
+										@extend %virtual;
+										@include absolute(0, auto, auto, -5px);
+										width: 5px;
+										height: 10px;
+										color: #000;
+										content: "/";
+										font-style: italic;
+										color: #000;
+										
+									}
+
+									&:first-child{
+										color: #000;
+										@include font(14px, 16px);
+										font-style: italic;
+										margin-left: 0;
+									}
+									&:first-child:before{
+										display: none;
+									}
+
+								}
+							}
+						}
+					}
+				}
+			}
+			.name{
+				color: #72ad75;
+				letter-spacing: -0.01em;
+				font-family: "36035";
+			}
+			strong{
+			    margin: 0 0 15px;
+				display: block;
+				position: relative;
+				font:{
+					family: "36035";
+					weight: normal;
+					}
+
+				&:before{
+					@extend %sprite;
+					background-position:  -29px -32px;
+				}
+			}
+			.chose-us{
+				strong{
+					@include border(bottom, 1px, dotted, $grey);
+					letter-spacing: -0.015em;
+					padding: 8px 0 10px 47px;
+				}
+				> ul{
+					list-style-image: url(../img/arrow.png);
+					margin-left: 22px;
+
+					li{
+						padding-left: 4px;
+						margin-bottom: 8px;
+						font-style: italic;
+
+						a{
+							text-decoration: underline;
+
+							&:hover{
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+
+			.testimonials{
+				ul li{
+					margin-bottom: 9px;
+					@include border(bottom, 1px, dotted, $grey);
+					padding-bottom: 10px;
+
+					&:last-child{
+						border: none;
+					}
+
+					strong{
+						font:{
+							
+							style: italic;
+							}
+						color: #000;
+						margin-bottom: 11px;
+	    				padding: 8px 0 4px 42px;
+						@include font(14px, 16px);
+
+						&:before{
+							@extend %sprite;
+							background-position: -58px -32px;
+						}
+					}
+					span{
+						display: block;
+
+						b{
+							font-weight: normal;
+							font-family: arial, helvetica, sans-serif;
+						}
+					}
+
+					p{
+						margin-bottom: 10px;
+
+						a{
+							text-decoration: underline;
+
+							&:hover{
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+
+			
+		}
+	}
+}
+footer{
+	padding-top: 30px;
+
+	.nav-pills{
+		margin-bottom: 0;
+
+		li{
+			float: none;
+			display: inline-block;
+			position: relative;
+
+			&:first-child::before{
+				display: none;
+			}
+
+			&:before{
+				@extend %virtual;
+				@include absolute(2px, auto, auto, -8px);
+				width: 5px;
+				height: 10px;
+				color: #000;
+				content: "//";
+				z-index: 1;
+				color: $grey;
+			}
+
+			a{
+				padding: 0 9px;
+
+				&:hover{
+					background-color: transparent;
+				}
+			}
+
+		}
+	} 
+	span{
+		@include font(12px, 14px);
+		color: $grey;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 900px){
+
+	.navbar-header{
+		text-align: center;
+		float: none;
+
+		.navbar-brand{
+			display: inline-block;
+			float: none;
+		}
+	}
+
+	.navbar .nav{
+		display: table;
+		margin: 0;
+		width: 100%;
+
+		li{
+			display: table-cell;
+			width: auto;
+			float: none;
+		}
+	}
+
+	main{
+		.banner {
+			padding-top: 58px;
+
+
+			a{
+
+			}
+			
+		}
+	}
+}
+@media screen and (max-width: 680px){
+	main .banner{
+		.slogan{
+			top: 70px;
+			left: 20px;
+		}
+		.call{
+			bottom: 50px;
+		}
+	}
+}
