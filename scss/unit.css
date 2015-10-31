@@ -349,6 +349,8 @@ body footer::before {
 body footer #footer {
   padding: 50px 0 15px;
   text-align: center;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 body footer #footer .row {
@@ -435,6 +437,21 @@ body footer #footer .box .wrapper-stitch:before {
   right: auto;
 }
 
+body footer #footer .box .wrapper-stitch .about-me {
+  text-align: left;
+}
+
+body footer #footer .box .wrapper-stitch .about-me h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+body footer #footer .box .wrapper-stitch .about-me p {
+  margin-bottom: 5px;
+}
+
 body footer #footer .box .wrapper-stitch .stitch {
   width: 100%;
   border: 2px dashed #FFBE40;
@@ -477,6 +494,7 @@ body footer #footer .box .wrapper-stitch .stitch .social li:hover a, body footer
 body footer #footer .box .wrapper-stitch .stitch span {
   display: block;
   color: #fff;
+  margin-bottom: 5px;
 }
 
 body footer #footer .box .wrapper-stitch .stitch span a {

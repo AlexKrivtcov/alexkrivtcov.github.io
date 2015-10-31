@@ -327,14 +327,16 @@ body{
 			@extend %center;
 			padding: 50px 0 15px;
 			text-align: center;
+			font-size: 12px;
+			line-height: 14px;
 
 			.row {
-    display: flex;
-}
+			    display: flex;
+			}
 
-[class*="col-"] {
-    display: flex;
-}
+			[class*="col-"] {
+			    display: flex;
+			}
 			
 			.box{
 				@extend %patch;
@@ -402,6 +404,19 @@ body{
 						@include absolute(0, auto, auto, 0);
 					}
 
+					.about-me{
+						text-align: left;
+						h4{
+							margin: 0 0 5px 0;
+							font-size: 14px;
+							line-height: 16px;
+							font-weight: bold;
+						}
+						p{
+							margin-bottom: 5px;
+						}
+					}
+
 					.stitch{
 						width: 100%;
 						@include border(all, 2px, dashed, #FFBE40);
@@ -448,6 +463,7 @@ body{
 						span{
 							display: block;
 							color: #fff;
+							margin-bottom: 5px;
 
 							a{
 								color: #fff;
