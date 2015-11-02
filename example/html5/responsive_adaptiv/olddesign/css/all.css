@@ -1202,5 +1202,7 @@ footer{
 			background: linear-gradient(200deg, rgba(0, 0 ,0, 0.2), rgba(0, 0 ,0, 0.7)),
 				url(../img/footer.jpg) 0 0;			
 }
-
+footer a{
+	color: rgba(255, 255, 255, 0.7);
+}
 

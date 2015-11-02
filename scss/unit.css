@@ -24,7 +24,6 @@ body header .navbar-default .navbar-brand .stitch {
 
 body main div[class^="col-"] .circle, body footer #footer .box {
   box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.6) inset, 1px 2px 8px rgba(252, 255, 255, 0.7) inset, 0 3px 10px 3px rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 50, 0.3);
 }
 
 body header::before, body footer::before, body footer #footer .box .wrapper-stitch:before {
@@ -196,6 +195,7 @@ body main div[class^="col-"] {
 }
 
 body main div[class^="col-"] .circle {
+  background-color: rgba(0, 0, 50, 0.3);
   overflow: hidden;
   display: inline-block;
   width: 300px;
@@ -362,6 +362,7 @@ body footer #footer [class*="col-"] {
 }
 
 body footer #footer .box {
+  background-color: rgba(0, 0, 50, 0.45);
   border-radius: 0 0 70px 70px;
   padding: 15px;
   width: 100%;
